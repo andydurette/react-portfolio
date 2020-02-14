@@ -27,8 +27,10 @@
     
     .expertise-piece{
       width:100%;
-      h4{
-        margin-top: 15px;
+      text-align:center;
+      padding:0 20px;
+      h5{
+        margin: 0 0 15px;
         margin-bottom: 0;
         font-size:1.5rem;
         font-weight: 700;
@@ -62,9 +64,12 @@
         background-color: #117a8b;
         border-color: #10707f;
       }
-      img{
-        border-radius:5px;
-        width:100%;
+      .expertise-icons{
+        text-align:left;
+        img{
+          margin-left: 5px;
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -74,23 +79,14 @@
 @media only screen and (min-width: 600px) {
 
   #expertise{
-
-  #expertise-grid{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   #expertise-grid{
     .expertise-piece{
       display: flex;
-      width: 50%;
+      width: 80%;
+      margin:0 auto;
       flex-direction: column;
       padding:15px;
-      div img{
-        width:100%;
-      }
-      .expertise-links{
-        flex-direction:row;
+      .expertise-piece{
         .btn:nth-of-type(1){
           margin-right:20px;
         }
@@ -105,6 +101,8 @@
     #expertise-grid{
       max-width:1140px;
       margin:0 auto;
+      flex-wrap: wrap;
+      flex-direction: row;
       .expertise-piece{
         width: 33%;
       }

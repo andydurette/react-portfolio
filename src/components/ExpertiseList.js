@@ -18,7 +18,7 @@ const ExpertiseList = () => {
         <p className="skillset-heading">SKILLSET</p>
         <div className="expertise-icons">
           {expertise.skills.map(skill => (
-            <img key={skill[0]} src={skill[1]} alt={skill[2]}/>
+            <img key={skill[0]} src={skill[1]} alt={skill[2]} title={[2]}/>
           ))}
         </div>
          
