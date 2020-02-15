@@ -1,32 +1,64 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
+import { AppContext } from './AppContext';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 
 const Nav = () => {
+
+  // Handle mobile class for operating menu
+  const {mobileNav} = useContext(AppContext);
+  const [mobileNavs, setMobileNavs] = mobileNav;
+
+  const onClickHandler = () => {
+    setMobileNavs( mobileNavs === false ? true: false);
+  }
+
+  // Handles checking wheather the nav should change look based on window scroll position
+  const {scroll} = useContext(AppContext);
+  const [scrolls, setScrolls] = scroll;
+
+  const test = () => {
+    if(window.scrollY >= 120){
+      setScrolls( scrolls === false ? true: true);
+     }else{
+      setScrolls( scrolls === true ? false: false);
+     }
+  }
+
+ useEffect(() => {
+  if(window.scrollY >= 120){
+    setScrolls( scrolls === false ? true: false);
+   }
+ }, []);
+
+ useEffect(() => {
+   window.addEventListener("scroll", test);
+ });
+
+/*mobileNavs === false ? '' : 'mobile-menu'*/
+/*scrolls === false ? '' : 'scrolled'*/
+  
+
   return(
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger"></a>
-        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#page-top">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#expertise">Expertise</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<nav className={ (mobileNavs === false ? '' : 'mobile-menu') + (scrolls === false ? '' : 'scrolled')} >
+    <button className="icon js-focus-visible" id="myMenuFunction" onClick={onClickHandler}>
+        <svg className="inline-svg" version="1.1" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 23.5 25">
+            <title>Mobile Menu</title>
+            <g className="svg-menu-toggle">
+                <path className="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z"></path>
+                <path className="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z"></path>
+                <path className="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0 c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z"></path>
+                <rect fill="none"></rect>
+            </g>
+        </svg>
+    </button>
+    <div>
+      <AnchorLink href='#home' className="active">HOME</AnchorLink>
+      <AnchorLink href='#expertise'>EXPERTISE</AnchorLink>
+      <AnchorLink href='#portfolio'>PORTFOLIO</AnchorLink>
+      <AnchorLink href='#contact'>CONTACT</AnchorLink>
+    </div>
+</nav>
   )
 }
 
