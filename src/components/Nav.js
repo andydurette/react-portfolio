@@ -17,27 +17,92 @@ const Nav = () => {
   const {scroll} = useContext(AppContext);
   const [scrolls, setScrolls] = scroll;
 
-  const test = () => {
-    if(window.scrollY >= 120){
-      setScrolls( scrolls === false ? true: true);
-     }else{
-      setScrolls( scrolls === true ? false: false);
-     }
-  }
-
- useEffect(() => {
+  const scrolled = () => {
   if(window.scrollY >= 120){
-    setScrolls( scrolls === false ? true: false);
-   }
- }, []);
-
- useEffect(() => {
-   window.addEventListener("scroll", test);
- });
-
-/*mobileNavs === false ? '' : 'mobile-menu'*/
-/*scrolls === false ? '' : 'scrolled'*/
+      setScrolls( scrolls === false ? true: true);
+    }else{
+      setScrolls( scrolls === true ? false: false);
+    }
+  }
   
+  useEffect(() => {
+    if(window.scrollY >= 120) setScrolls( scrolls === false ? true: false);
+   // elementInViewport();
+  }, []);
+
+
+  // Handle setting active class one navbar element
+  const {navActive} = useContext(AppContext);
+  let [active, setActive] = navActive;
+
+  /*
+  let elementInViewport = () => {
+    
+    //Home
+    let myElement1 = document.querySelector("#home");
+    let bounding1 = myElement1.getBoundingClientRect();
+
+    //Expertise
+    let myElement2 = document.querySelector("#expertise");
+    let bounding2 = myElement2.getBoundingClientRect();
+
+    //Portfolio
+    let myElement3 = document.querySelector("#portfolio");
+    let bounding3 = myElement3.getBoundingClientRect();
+
+    //Contact
+    let myElement4 = document.querySelector("#contact");
+    let bounding4 = myElement4.getBoundingClientRect();
+
+    if (bounding1.top >= 0 && bounding1.left >= 0 && bounding1.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding1.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+      
+      if (active !== {'homeActive': true}) { setActive(active = {'homeActive': true})}
+    //  console.log("home");
+    } else if(bounding2.top >= 0 && bounding2.left >= 0 && bounding2.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding2.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+      if (active !== {'expertiseActive': true}) { setActive(active = {'expertiseActive': true}); }
+     // console.log("expertise");
+    } else if(bounding3.top >= 0 && bounding3.left >= 0 && bounding3.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding3.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+      if (active !== {'portfolioActive': true}) { setActive(active = {'portfolioActive': true}); }
+     // console.log("portofolio");
+    }else if(bounding4.top >= 0 && bounding4.left >= 0 && bounding4.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding4.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+      if (active !== {'contactActive': true}) { setActive(active = {'contactActive': true});}
+     // console.log("contact");
+    }
+  }
+  */
+
+ const isElementXPercentInViewport = function(el, percentVisible) {
+  let
+    rect = el.getBoundingClientRect(),
+    windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+  return !(
+    Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
+    Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
+  )
+};
+
+  document.addEventListener("scroll", () => {
+    if( isElementXPercentInViewport(document.querySelector("#home"), 100) === true){
+      setActive(active = "home");
+    }else if( isElementXPercentInViewport(document.querySelector("#expertise"), 100) === true){
+      setActive(active = "expertise");
+    }else if( isElementXPercentInViewport(document.querySelector("#portfolio"), 100) === true){
+      setActive(active = "portfolio");
+    }else if( isElementXPercentInViewport(document.querySelector("#contact"), 100) === true){
+      setActive(active = "contact");
+    }
+  });
+  
+
+
+useEffect(() => {
+  window.addEventListener("scroll", scrolled);
+  window.addEventListener("scroll", () => {
+    //elementInViewport();
+  });
+  
+});
 
   return(
 <nav className={ (mobileNavs === false ? '' : 'mobile-menu') + (scrolls === false ? '' : 'scrolled')} >
@@ -53,10 +118,10 @@ const Nav = () => {
         </svg>
     </button>
     <div>
-      <AnchorLink href='#home' className="active">HOME</AnchorLink>
-      <AnchorLink href='#expertise'>EXPERTISE</AnchorLink>
-      <AnchorLink href='#portfolio'>PORTFOLIO</AnchorLink>
-      <AnchorLink href='#contact'>CONTACT</AnchorLink>
+      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''}>HOME</AnchorLink>
+      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''}>EXPERTISE</AnchorLink>
+      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''}>PORTFOLIO</AnchorLink>
+      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''}>CONTACT</AnchorLink>
     </div>
 </nav>
   )

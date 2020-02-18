@@ -9,10 +9,17 @@ export const AppProvider = props => {
   const [expertise, setExperience] = useState(expertiseData);
   const [mobileNav, setMobileNav] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const [active, setActive] = useState("home");
 
 
   return(
-    <AppContext.Provider value={{ portfolio: [portfolio, setPortfolio], expertise: [expertise, setExperience], mobileNav: [mobileNav, setMobileNav], scroll: [scroll, setScroll] }}>
+    <AppContext.Provider value={{ 
+      portfolio: [portfolio, setPortfolio],
+      expertise: [expertise, setExperience], 
+      mobileNav: [mobileNav, setMobileNav], 
+      scroll: [scroll, setScroll],
+      navActive: [active, setActive]
+       }}>
       {props.children}
     </AppContext.Provider>
   );
