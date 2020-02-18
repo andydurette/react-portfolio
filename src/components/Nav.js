@@ -1,111 +1,82 @@
 import React, {useContext, useEffect} from 'react';
 import { AppContext } from './AppContext';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+//import ActiveCheck from './ActiveCheck';
 
 
 const Nav = () => {
 
+  /********************************************* Start of Initialize context state elements *********************************************/
   // Handle mobile class for operating menu
   const {mobileNav} = useContext(AppContext);
   const [mobileNavs, setMobileNavs] = mobileNav;
-
-  const onClickHandler = () => {
-    setMobileNavs( mobileNavs === false ? true: false);
-  }
-
   // Handles checking wheather the nav should change look based on window scroll position
-  const {scroll} = useContext(AppContext);
-  const [scrolls, setScrolls] = scroll;
-
-  const scrolled = () => {
-  if(window.scrollY >= 120){
-      setScrolls( scrolls === false ? true: true);
-    }else{
-      setScrolls( scrolls === true ? false: false);
-    }
-  }
-  
-  useEffect(() => {
-    if(window.scrollY >= 120) setScrolls( scrolls === false ? true: false);
-   // elementInViewport();
-  }, []);
-
-
+  let {scroll} = useContext(AppContext);
+  let [scrolls, setScrolls] = scroll;
   // Handle setting active class one navbar element
   const {navActive} = useContext(AppContext);
   let [active, setActive] = navActive;
 
-  /*
-  let elementInViewport = () => {
-    
-    //Home
-    let myElement1 = document.querySelector("#home");
-    let bounding1 = myElement1.getBoundingClientRect();
+  /********************************************* End of Initialize context state elements *********************************************/
 
-    //Expertise
-    let myElement2 = document.querySelector("#expertise");
-    let bounding2 = myElement2.getBoundingClientRect();
+  // Navigation mobile menu controller
+  const onClickHandler = () => {
+    setMobileNavs( mobileNavs === false ? true: false);
+  }
 
-    //Portfolio
-    let myElement3 = document.querySelector("#portfolio");
-    let bounding3 = myElement3.getBoundingClientRect();
-
-    //Contact
-    let myElement4 = document.querySelector("#contact");
-    let bounding4 = myElement4.getBoundingClientRect();
-
-    if (bounding1.top >= 0 && bounding1.left >= 0 && bounding1.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding1.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-      
-      if (active !== {'homeActive': true}) { setActive(active = {'homeActive': true})}
-    //  console.log("home");
-    } else if(bounding2.top >= 0 && bounding2.left >= 0 && bounding2.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding2.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-      if (active !== {'expertiseActive': true}) { setActive(active = {'expertiseActive': true}); }
-     // console.log("expertise");
-    } else if(bounding3.top >= 0 && bounding3.left >= 0 && bounding3.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding3.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-      if (active !== {'portfolioActive': true}) { setActive(active = {'portfolioActive': true}); }
-     // console.log("portofolio");
-    }else if(bounding4.top >= 0 && bounding4.left >= 0 && bounding4.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding4.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-      if (active !== {'contactActive': true}) { setActive(active = {'contactActive': true});}
-     // console.log("contact");
+  // Homepage specific style checker
+  const scrolled = () => {
+  if(window.scrollY >= 120){
+      setScrolls( scrolls = true);
+    }else{
+      setScrolls( scrolls = false);
     }
   }
-  */
 
- const isElementXPercentInViewport = function(el, percentVisible) {
-  let
-    rect = el.getBoundingClientRect(),
-    windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-
-  return !(
-    Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
-    Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
-  )
-};
-
-  document.addEventListener("scroll", () => {
-    if( isElementXPercentInViewport(document.querySelector("#home"), 100) === true){
-      setActive(active = "home");
-    }else if( isElementXPercentInViewport(document.querySelector("#expertise"), 100) === true){
-      setActive(active = "expertise");
-    }else if( isElementXPercentInViewport(document.querySelector("#portfolio"), 100) === true){
-      setActive(active = "portfolio");
-    }else if( isElementXPercentInViewport(document.querySelector("#contact"), 100) === true){
-      setActive(active = "contact");
+  // Homepage specific style checker until scrolled out of section
+  const IsElementXPercentInViewport = function(el, percentVisible) {
+    let
+      rect = el.getBoundingClientRect(),
+      windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+  
+      return !(
+        Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
+        Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
+      )
+    };
+    
+    let ActiveCheck = () => {
+      document.addEventListener("scroll", () => {
+        if( IsElementXPercentInViewport(document.querySelector("#home"), 20) === true){
+          setActive(active = "home");
+        }else if( IsElementXPercentInViewport(document.querySelector("#expertise"), 20) === true){
+          setActive(active = "expertise");
+        }else if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 20) === true){
+          setActive(active = "portfolio");
+        }else if( IsElementXPercentInViewport(document.querySelector("#contact"), 20) === true){
+          setActive(active = "contact");
+        }
+      });
     }
-  });
   
 
+  /********************************************* Call lifecycle methods *********************************************/
 
-useEffect(() => {
-  window.addEventListener("scroll", scrolled);
-  window.addEventListener("scroll", () => {
-    //elementInViewport();
-  });
+  useEffect(() => {
+    if(window.scrollY >= 120) setScrolls( scrolls === false ? true: false);
+    ActiveCheck();
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrolled);
+    window.addEventListener("scroll", () => {
+      //elementInViewport();
+    });
   
 });
 
   return(
-<nav className={ (mobileNavs === false ? '' : 'mobile-menu') + (scrolls === false ? '' : 'scrolled')} >
+<nav className={ (mobileNavs === false ? '' : 'mobile-menu') + ' ' + (scrolls === false ? '' : 'scrolled')} >
     <button className="icon js-focus-visible" id="myMenuFunction" onClick={onClickHandler}>
         <svg className="inline-svg" version="1.1" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 23.5 25">
             <title>Mobile Menu</title>
