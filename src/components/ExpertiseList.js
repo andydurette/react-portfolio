@@ -12,13 +12,13 @@ const ExpertiseList = () => {
       <h2>EXPERTISE</h2>
       {expertises.map(expertise => (
       <div key={expertise.id} className="expertise-piece">
-        <div>{/* Icon to go here */}</div>
-        <h4>{expertise.heading}</h4>
+        <div><img src={expertise.icon} alt={expertise.alt} width="50px" height="50px"/></div>
+        <h5>{expertise.heading}</h5>
         <p>{expertise.copy}</p>
         <p className="skillset-heading">SKILLSET</p>
         <div className="expertise-icons">
           {expertise.skills.map(skill => (
-            <img key={skill[0]} src={skill[1]} alt={skill[2]} title={[2]}/>
+            <img key={skill[0]} src={skill[1]} alt={skill[2]} title={skill[2]}/>
           ))}
         </div>
          

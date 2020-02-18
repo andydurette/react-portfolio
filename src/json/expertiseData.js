@@ -1,7 +1,8 @@
 export const expertiseData = [
   {
   'id': 1,
-  'icon':'',
+  'icon':'content/img/logos/design.svg',
+  'alt':"",
   'heading':'Design',
   'copy': 'I design while prioritizing pixel perfect layouts, and creating lightweight graphics such as svgs.',
   'skills': [
@@ -11,7 +12,8 @@ export const expertiseData = [
   },
   {
     'id': 2,
-    'icon':'',
+    'icon':'content/img/logos/code.svg',
+    'alt':"",
     'heading':'Code',
     'copy': 'I enjoy coding things from scratch and exploring different ways to build such as with React.js and Bootstrap.',
     'skills': [
@@ -30,7 +32,8 @@ export const expertiseData = [
   },
   {
     'id': 3,
-    'icon':'',
+    'icon':'content/img/logos/ui-ux.svg',
+    'alt':"",
     'heading':'UI / UX',
     'copy': 'I have experience working with clients, designing layouts that align with their goals and follow accessibility guidelines.',
     'skills': [
