@@ -9,8 +9,12 @@ nav {
   left: 0;
   width: 100%;
   z-index: 500;
+  min-height:53px;
   a {
-    display: block;
+    //display: none;
+    display: flex;
+    flex-direction: column;
+    //
     color: #fff;
     text-align: center;
     padding: 15px 16.5px;
@@ -18,35 +22,145 @@ nav {
     font-size: 15px;
     font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    
+    border-bottom: 1px solid transparent;
+    margin:2px;
   } 
-  a.active{
-      border-bottom:1px solid white;
+  a.active {
+    color: $color-focus-blue;
+    border-bottom:1px solid $color-focus-blue;
   }
-  a:hover{
-    border-bottom:1px solid white;
+  a:hover {
+    color: $color-focus-blue;
+    border-bottom:1px solid $color-focus-blue;
   }
-  .icon {
-    display: none;
-    font-size: 35px!important;
+  button.icon {
+    font-size: 35px;
     padding-top: 0px;
     padding-left: 12px;
-    padding-bottom: 0px;
+    padding-bottom:12px;
     padding-right: 12px;
+    float: right;
+    display: block;
+    margin-right: 15px;
+    cursor:pointer;
+    border: 0;
+    background-color: TRANSPARENT;
+    color: WHITE;
+    position: fixed;
+    right: 0;
+    top: 0;
+    :hover{
+      color: $color-focus-blue;
+    }
+  }
+}
+
+//Mobile navigation
+@media screen and (max-width: 990px) {
+  nav div{
+    height: auto;
+    max-height: 0;
+    margin-top:53px;
+    transition: max-height 0.5s ease-out;
+  }
+  
+  nav.mobile-menu {
+    div{
+      max-height:300px;
+      transition: max-height 0.5s ease-in;
+    }
+    a {
+      display: flex;
+      flex-direction:column;
+    }
+  }
+}
+
+// SVG menu
+.svg-menu-toggle {
+	fill:#fff;
+	pointer-events:all; //needs to be there so the hover works
+	cursor:pointer;
+
+	.bar {
+		-webkit-transform:rotate(0) translateY(0) translateX(0);
+		transform:rotate(0) translateY(0) translateX(0);
+		opacity:1;
+		-webkit-transform-origin: 20px 10px;
+		transform-origin: 20px 10px;
+		-webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+	    transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+  .bar:nth-of-type(1) {
+    -webkit-transform-origin: 20px 10px;
+		transform-origin: 20px 10px;
   }
 
+  .bar:nth-of-type(3) {
+  -webkit-transform-origin: 20px 20px;
+  transform-origin: 20px 20px;
+  }
+} 
+
+nav button:hover .svg-menu-toggle {
+  fill:$color-focus-blue;
 }
 
-.js-focus-visible:focus:not(.focus-visible) {
-  outline: none;
+
+nav.mobile-menu .svg-menu-toggle {
+    fill:$color-focus-blue;
+  
+    .bar:nth-of-type(1) {
+		-webkit-transform:rotate(-45deg) translateY(0) translateX(0);
+		transform:rotate(-45deg) translateY(0) translateX(0);
+    }
+
+    .bar:nth-of-type(2) {
+		opacity:0;
+    }
+
+    .bar:nth-of-type(3) {
+    -webkit-transform:rotate(45deg) translateY(0em) translateX(0em);
+		transform:rotate(45deg) translateY(0em) translateX(0em);
+    }
+}
+.inline-svg {
+  display:block;
+  margin:0 auto;
 }
 
 
-@media screen and (min-width: 991px) {
+
+
+
+
+@media screen and (min-width: 900px) {
+  // Undo base styles
+  nav{
+    button.icon{
+      display:none;
+    }
+  }
+
+
+
   nav{
     min-height: 77px;
     padding-top: 27px;
     background-color: transparent;
+    a{
+      min-height: 46px;
+      margin:2px 0;
+    }
+    a.active{
+      color:white;
+      border-bottom:1px solid white;
+    }
+    a:hover{
+      color:white;
+      border-bottom:1px solid white;
+    }
   }
   nav div{
     display:flex;
@@ -71,110 +185,5 @@ nav {
   }
 }
 
-:focus {
-  outline-color: $color-honey-gold;
-  outline-width:2px;
-  outline-style: solid;
-}
 
 
-/*
-  This will hide the focus indicator if the element receives focus via the mouse,
-  but it will still show up on keyboard focus.
-*/
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
-}
-
-
-//Mobile navigation
-@media screen and (max-width: 990px) {
-  nav a {display: none;}
-  nav button.icon {
-    float: right;
-    display: block;
-    margin-right: 15px;
-    cursor:pointer;
-    border: 0;
-    background-color: TRANSPARENT;
-    color: WHITE;
-    padding-bottom:12px;
-  }
-  nav button.icon:hover{
-    color: $color-honey-gold;
-  }
-  nav button:focus{
-    color: $color-honey-gold;
-  }
-  nav.mobile-menu {
-    position: fixed;
-  }
-  nav.mobile-menu .icon {
-    position: fixed;
-    right: 0;
-    top: 0;
-  }
-  nav.mobile-menu a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  nav.mobile-menu a:first-of-type{
-    margin-top:53px;
-  }
-}
-
-// SVG menu
-.svg-menu-toggle {
-
-	fill:#fff;
-	pointer-events:all; //needs to be there so the hover works
-	cursor:pointer;
-
-	.bar {
-		-webkit-transform:rotate(0) translateY(0) translateX(0);
-		transform:rotate(0) translateY(0) translateX(0);
-		opacity:1;
-		-webkit-transform-origin: 20px 10px;
-		transform-origin: 20px 10px;
-		-webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
-	    transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
-  }
-  
-  .bar:nth-of-type(1) {
-    -webkit-transform-origin: 20px 10px;
-		transform-origin: 20px 10px;
-  }
-
-   .bar:nth-of-type(3) {
-    -webkit-transform-origin: 20px 20px;
-		transform-origin: 20px 20px;
-   }
-}
-
-nav button:hover .svg-menu-toggle, nav button:focus .svg-menu-toggle {
-  fill:$color-honey-gold;
-}
-
-
-nav.mobile-menu .svg-menu-toggle {
-    fill:$color-honey-gold;
-  
-    .bar:nth-of-type(1) {
-		-webkit-transform:rotate(-45deg) translateY(0) translateX(0);
-		transform:rotate(-45deg) translateY(0) translateX(0);
-    }
-
-    .bar:nth-of-type(2) {
-		opacity:0;
-    }
-
-    .bar:nth-of-type(3) {
-    -webkit-transform:rotate(45deg) translateY(0em) translateX(0em);
-		transform:rotate(45deg) translateY(0em) translateX(0em);
-    }
-}
-.inline-svg {
-  display:block;
-  margin:0 auto;
-}

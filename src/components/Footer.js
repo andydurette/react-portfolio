@@ -1,9 +1,13 @@
 import React from 'react';
 
+// Sets year in footer copyright
+let year = new Date().getFullYear();
+
+
 const Footer = () => {
   return(
 <footer>
-  <span className="copyright">Copyright © Andy Durette 2020</span>
+  <span className="copyright">Copyright © Andy Durette {year}</span>
   <div className="footerLinks">
   <ul className="list-inline social-buttons">
     <li className="list-inline-item">

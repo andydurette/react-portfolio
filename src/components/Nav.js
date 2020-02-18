@@ -9,9 +9,9 @@ const Nav = () => {
   /********************************************* Start of Initialize context state elements *********************************************/
   // Handle mobile class for operating menu
   const {mobileNav} = useContext(AppContext);
-  const [mobileNavs, setMobileNavs] = mobileNav;
+  let [mobileNavs, setMobileNavs] = mobileNav;
   // Handles checking wheather the nav should change look based on window scroll position
-  let {scroll} = useContext(AppContext);
+  const {scroll} = useContext(AppContext);
   let [scrolls, setScrolls] = scroll;
   // Handle setting active class one navbar element
   const {navActive} = useContext(AppContext);
@@ -20,8 +20,13 @@ const Nav = () => {
   /********************************************* End of Initialize context state elements *********************************************/
 
   // Navigation mobile menu controller
-  const onClickHandler = () => {
-    setMobileNavs( mobileNavs === false ? true: false);
+  const onClickHandler = (e) => {
+    console.log(e.target.href);
+    if (e.target.href != undefined){
+      setMobileNavs( mobileNavs = false);
+    }else{
+      setMobileNavs( mobileNavs === false ? true: false);
+    }
   }
 
   // Homepage specific style checker
@@ -47,13 +52,13 @@ const Nav = () => {
     
     let ActiveCheck = () => {
       document.addEventListener("scroll", () => {
-        if( IsElementXPercentInViewport(document.querySelector("#home"), 20) === true){
+        if( IsElementXPercentInViewport(document.querySelector("#home"), 10) === true){
           setActive(active = "home");
-        }else if( IsElementXPercentInViewport(document.querySelector("#expertise"), 20) === true){
+        }else if( IsElementXPercentInViewport(document.querySelector("#expertise"), 10) === true){
           setActive(active = "expertise");
-        }else if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 20) === true){
+        }else if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 10) === true){
           setActive(active = "portfolio");
-        }else if( IsElementXPercentInViewport(document.querySelector("#contact"), 20) === true){
+        }else if( IsElementXPercentInViewport(document.querySelector("#contact"), 10) === true){
           setActive(active = "contact");
         }
       });
@@ -77,7 +82,7 @@ const Nav = () => {
 
   return(
 <nav className={ (mobileNavs === false ? '' : 'mobile-menu') + ' ' + (scrolls === false ? '' : 'scrolled')} >
-    <button className="icon js-focus-visible" id="myMenuFunction" onClick={onClickHandler}>
+    <button className="icon" id="myMenuFunction" onClick={onClickHandler}>
         <svg className="inline-svg" version="1.1" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 23.5 25">
             <title>Mobile Menu</title>
             <g className="svg-menu-toggle">
@@ -89,10 +94,10 @@ const Nav = () => {
         </svg>
     </button>
     <div>
-      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''}>HOME</AnchorLink>
-      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''}>EXPERTISE</AnchorLink>
-      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''}>PORTFOLIO</AnchorLink>
-      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''}>CONTACT</AnchorLink>
+      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''} onClick={onClickHandler}>HOME</AnchorLink>
+      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''} onClick={onClickHandler}>EXPERTISE</AnchorLink>
+      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''} onClick={onClickHandler}>PORTFOLIO</AnchorLink>
+      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''} onClick={onClickHandler}>CONTACT</AnchorLink>
     </div>
 </nav>
   )

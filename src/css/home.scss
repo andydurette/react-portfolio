@@ -89,12 +89,15 @@
 
 
 
-@media (max-width:425px) {
+@media (max-width:465px) {
   #home .intro-text{
-    .intro-heading,.intro-lead-in {
+    .intro-heading{
       text-align:center;
+      font-size: 100px;
+      line-height: 80px;
       }
       .intro-lead-in{
+        text-align:center;
         margin-top:40px;
         margin-left:0;
       }
@@ -102,7 +105,7 @@
 }
 
 
-@media (min-width:426px) and (max-width:576px) {
+@media (min-width:466px) and (max-width:576px) {
   #home{
     background-size:300px;
       .intro-text {

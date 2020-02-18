@@ -27,6 +27,8 @@ html,body{
 
   // Acessibility Support
 
+  /* This will hide the focus indicator if the element receives focus via the mouse, but it will still show up on keyboard focus.*/
+
   body:not(.user-is-tabbing) a:focus,
   body:not(.user-is-tabbing) button:focus,
   body:not(.user-is-tabbing) input:focus,
@@ -35,4 +37,13 @@ html,body{
     outline: none!important;
   }
 
+.js-focus-visible:focus:not(.focus-visible) {
+  outline: none!important;
+}
+
+:focus {
+  outline-color: $color-honey-gold;
+  outline-width:2px;
+  outline-style: solid;
+}
   

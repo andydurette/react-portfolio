@@ -21,7 +21,8 @@ document.addEventListener('keydown', handleFirstTab);
 function App() {
   return (
     <AppProvider> 
-      <div className="App">
+      {/* Add js-focus-visible to listen if someone uses keyboard focus touse website */}
+      <div className="App js-focus-visible">
         <Nav />
         <Home />
         <ExpertiseList />
