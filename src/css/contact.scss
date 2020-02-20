@@ -30,8 +30,12 @@
     }
     .contact-item{
       display:flex;
+      flex-direction: column;
       justify-content:center;
       align-items:center;
+      .contact-item{
+        flex-direction: row;
+      }
       i{
         font-size:2rem;
       }
@@ -44,22 +48,19 @@
 }
 
 
-@media only screen and (min-width: 700px){
-  #contact #contact-grid {
-      width:80%;
-      padding-bottom:70px;
-  }
-}
-
-
-
 @media only screen and (min-width: 900px){
   #contact #contact-grid {
       max-width: 1140px;
-      width:50%;
-      p{
-        max-width:440px;
-        margin:0 auto 20px;
+      width:80%;
+      padding-bottom:70px;
+      .contact-item{
+        flex-direction: row;
       }
   }
+  
+  p{
+    max-width:600px;
+    margin:0 auto 20px;
+  }
 }
+

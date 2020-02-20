@@ -4,7 +4,7 @@ export const expertiseData = [
   'icon':'content/img/logos/design.svg',
   'alt':"",
   'heading':'Design',
-  'copy': 'I design while prioritizing pixel perfect layouts, and creating lightweight graphics such as svgs.',
+  'copy': 'I design while prioritizing pixel perfect layouts and performance, creating lightweight graphics such as svgs.',
   'skills': [
       [1,'content/img/logos/photoshop-icon.svg', 'Adobe Photoshop'],
       [2,'content/img/logos/illustrator-icon.svg', 'Adobe Illlustrator']
@@ -15,7 +15,7 @@ export const expertiseData = [
     'icon':'content/img/logos/code.svg',
     'alt':"",
     'heading':'Code',
-    'copy': 'I enjoy coding things from scratch and exploring different ways to build such as with React.js and Bootstrap.',
+    'copy': 'I enjoy coding from scratch and exploring libraries like react which provide inbuilt methods to aid development.',
     'skills': [
       [1,'content/img/logos/html5-icon.svg', 'Hyper Text Markup Language Version 5'],
       [2,'content/img/logos/css3-icon.svg', 'Cascading Style Sheets Version 3'],
