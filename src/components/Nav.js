@@ -21,8 +21,7 @@ const Nav = () => {
 
   // Navigation mobile menu controller
   const onClickHandler = (e) => {
-    console.log(e.target.href);
-    if (e.target.href != undefined){
+    if (e.target.href !== undefined){
       setMobileNavs( mobileNavs = false);
     }else{
       setMobileNavs( mobileNavs === false ? true: false);

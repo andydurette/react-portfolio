@@ -37,7 +37,7 @@ export const expertiseData = [
     'heading':'UI / UX',
     'copy': 'I have experience working with clients, designing layouts that align with their goals and follow accessibility guidelines.',
     'skills': [
-        [1,'content/img/logos/w3c-icon.svg', 'Adobe Photoshop'],
+        [1,'content/img/logos/w3c-icon.svg', 'Web Content Accessibility Guidelines (WCAG)'],
       ]
     }
 ]
