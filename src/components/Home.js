@@ -72,7 +72,6 @@ const Home = () => {
               data-period="2000"
               data-rotate='[ "Full Stack Developer", "Web & Graphic Designer", "Amateur Cook & Baker", "Life Long Learner" ]'></span></div>
             </div>
-          <div className="intro-image"><img src="/content/img/self-portrait/me.png" alt="Self Portrait"/></div>
         </div>
       </div>
     </section>
