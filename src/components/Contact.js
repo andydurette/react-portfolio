@@ -9,11 +9,11 @@ const Contact = () => {
         <h4 className="section-heading">Let's build something great together!</h4>
         <p>Ways to reach me are listed below, I have also left links to my professional profiles and social media. Feel free to look through them if you want to gain an idea of who I am in my professional and personal life.</p>
         <div className="contact-item">
-          <i className="fa fa-phone fa-inverse ad"></i>
+          <img src="/content/img/logos/phone.svg" alt="phone" width="25px" height="25px" />
           <p>647-607-7597</p>
         </div>
         <div className="contact-item">
-          <i className="fa fa-envelope fa-inverse"></i>
+          <img src="/content/img/logos/email.svg" alt="email" width="25px" height="25px"/>
           <p>andy@andydurette.com</p>
         </div>
       </div>

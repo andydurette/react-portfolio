@@ -101,7 +101,7 @@ export const portfolioData = [
     "altText": "Bees of America",
     "title": "Bees of America",
     "name": "Bees of America",
-    "description": "A personal project where I researched the history of bees and used React.js, github and Netlify to host a react routed application.",
+    "description": "A personal project where I researched the history of bees and used React.js, github and Netlify to host a react routed app.",
     "siteUrl": "https://bees-react.netlify.com/",
     "siteAria": "View Bees of America portfolio website",
     "repoUrl": "https://github.com/andydurette/Bees",
