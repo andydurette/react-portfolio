@@ -87,10 +87,10 @@ const Nav = () => {
         </svg>
     </button>
     <div>
-      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false) ? "-1":"0"}>HOME</AnchorLink>
-      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false) ? "-1":"0"}>EXPERTISE</AnchorLink>
-      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false) ? "-1":"0"}>PORTFOLIO</AnchorLink>
-      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false) ? "-1":"0"}>CONTACT</AnchorLink>
+      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && window.innerWidth < 900) ? "-1":"0"}>HOME</AnchorLink>
+      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && window.innerWidth < 900) ? "-1":"0"}>EXPERTISE</AnchorLink>
+      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && window.innerWidth < 900) ? "-1":"0"}>PORTFOLIO</AnchorLink>
+      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && window.innerWidth < 900 ) ? "-1":"0"}>CONTACT</AnchorLink>
     </div>
 </nav>
   )
