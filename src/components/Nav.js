@@ -69,15 +69,9 @@ const Nav = () => {
   useEffect(() => {
     if(window.scrollY >= 120) setScrolls( scrolls === false ? true: false);
     ActiveCheck();
+    window.addEventListener("scroll", scrolled);
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrolled);
-    window.addEventListener("scroll", () => {
-      //elementInViewport();
-    });
-  
-});
 
   return(
 <nav className={ (mobileNavs === false ? '' : 'mobile-menu') + ' ' + (scrolls === false ? '' : 'scrolled')} >
@@ -93,10 +87,10 @@ const Nav = () => {
         </svg>
     </button>
     <div>
-      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''} onClick={onClickHandler}>HOME</AnchorLink>
-      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''} onClick={onClickHandler}>EXPERTISE</AnchorLink>
-      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''} onClick={onClickHandler}>PORTFOLIO</AnchorLink>
-      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''} onClick={onClickHandler}>CONTACT</AnchorLink>
+      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false) ? "-1":"0"}>HOME</AnchorLink>
+      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false) ? "-1":"0"}>EXPERTISE</AnchorLink>
+      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false) ? "-1":"0"}>PORTFOLIO</AnchorLink>
+      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false) ? "-1":"0"}>CONTACT</AnchorLink>
     </div>
 </nav>
   )

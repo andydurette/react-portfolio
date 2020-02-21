@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Home = () => {
 
   var TxtRotate = function(el, toRotate, period) {
