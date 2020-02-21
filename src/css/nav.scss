@@ -11,10 +11,8 @@ nav {
   z-index: 500;
   min-height:53px;
   a {
-    //display: none;
     display: flex;
     flex-direction: column;
-    //
     color: #fff;
     text-align: center;
     padding: 15px 16.5px;
@@ -153,11 +151,11 @@ nav.mobile-menu .svg-menu-toggle {
       min-height: 46px;
       margin:2px 0;
     }
-    a.active{
+    a.active, a:focus{
       color:white;
       border-bottom:1px solid white;
     }
-    a:hover{
+    a:hover, a:focus{
       color:white;
       border-bottom:1px solid white;
     }
@@ -180,7 +178,11 @@ nav.mobile-menu .svg-menu-toggle {
     }
     a:hover{
       border-bottom: solid transparent;
-      outline: none;
+      color: $color-focus-blue;
+    }
+    a:focus{
+      border-bottom: solid transparent;
+      color: $color-focus-blue;
     }
   }
 }

@@ -16,6 +16,11 @@ const Nav = () => {
   // Handle setting active class one navbar element
   const {navActive} = useContext(AppContext);
   let [active, setActive] = navActive;
+  // Navigation Assesibility
+  const {navInMobile} = useContext(AppContext);
+  let [inMobile, setinMobile] = navInMobile;
+
+  
 
   /********************************************* End of Initialize context state elements *********************************************/
 
@@ -28,14 +33,26 @@ const Nav = () => {
     }
   }
 
-  // Homepage specific style checker
+  // Navigation Assesibility mobile menu controller
   const scrolled = () => {
-  if(window.scrollY >= 120){
-      setScrolls( scrolls = true);
+    if(window.scrollY >= 120){
+        setScrolls( scrolls = true);
+      }else{
+        setScrolls( scrolls = false);
+      }
+    } 
+ 
+
+  // Homepage specific style checker
+  const inMobileCheck = () => {
+  if(window.innerWidth < 900){
+      setinMobile( inMobile = true);
     }else{
-      setScrolls( scrolls = false);
+      setinMobile( inMobile = false);
+      setMobileNavs( mobileNavs = false);
     }
-  }
+  }  
+
 
   // Homepage specific style checker until scrolled out of section
   const IsElementXPercentInViewport = function(el, percentVisible) {
@@ -68,8 +85,11 @@ const Nav = () => {
 
   useEffect(() => {
     if(window.scrollY >= 120) setScrolls( scrolls === false ? true: false);
+    if(window.innerWidth < 900) setScrolls( scrolls === false ? true: false);
     ActiveCheck();
+    inMobileCheck();
     window.addEventListener("scroll", scrolled);
+    window.addEventListener("resize", inMobileCheck);
   }, []);
 
 
@@ -87,10 +107,10 @@ const Nav = () => {
         </svg>
     </button>
     <div>
-      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && window.innerWidth < 900) ? "-1":"0"}>HOME</AnchorLink>
-      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && window.innerWidth < 900) ? "-1":"0"}>EXPERTISE</AnchorLink>
-      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && window.innerWidth < 900) ? "-1":"0"}>PORTFOLIO</AnchorLink>
-      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && window.innerWidth < 900 ) ? "-1":"0"}>CONTACT</AnchorLink>
+      <AnchorLink href='#home' className={(active === "home") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }>HOME</AnchorLink>
+      <AnchorLink href='#expertise' className={(active === "expertise") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}>EXPERTISE</AnchorLink>
+      <AnchorLink href='#portfolio' className={(active === "portfolio") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}>PORTFOLIO</AnchorLink>
+      <AnchorLink href='#contact' className={(active === "contact") ? 'active' : ''} onClick={onClickHandler} tabIndex={(mobileNavs === false && inMobile !== false ) ? "-1":"0"}>CONTACT</AnchorLink>
     </div>
 </nav>
   )

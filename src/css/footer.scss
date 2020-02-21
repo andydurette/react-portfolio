@@ -18,7 +18,7 @@ footer{
     transition: all .3s;
     line-height: 40px;
   }
-  svg:hover {
+  svg:hover, a:focus svg {
     fill: #37c5f3;
     margin-top: -5px;
     margin-bottom: 5px;

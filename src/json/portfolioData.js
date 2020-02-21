@@ -25,7 +25,7 @@ export const portfolioData = [
   },
   {
     "id": 3,
-    "imageUrl": "content/img/portfolio/weather-2.jpg",
+    "imageUrl": "content/img/portfolio/weather.svg",
     "altText": "Toronto weather json data api site",
     "title": "React.js Weather App",
     "name": "React.js Weather App",

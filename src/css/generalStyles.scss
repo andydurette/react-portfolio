@@ -29,23 +29,15 @@ html,body{
 
   // Acessibility Support
 
-  /* This will hide the focus indicator if the element receives focus via the mouse, but it will still show up on keyboard focus.*/
+ /*
+  This will hide the focus indicator if the element receives focus via the mouse,
+  but it will still show up on keyboard focus.
+*/
 
-  body:not(.user-is-tabbing) a:focus,
-  body:not(.user-is-tabbing) button:focus,
-  body:not(.user-is-tabbing) input:focus,
-  body:not(.user-is-tabbing) select:focus,
-  body:not(.user-is-tabbing) textarea:focus {
-    outline: none!important;
-  }
-
-.js-focus-visible:focus:not(.focus-visible) {
-  outline: none!important;
+:focus{
+  outline: 2px solid $color-honey-gold;
 }
 
-:focus {
-  outline-color: $color-honey-gold;
-  outline-width:2px;
-  outline-style: solid;
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
 }
-  
