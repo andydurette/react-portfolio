@@ -151,11 +151,14 @@ nav.mobile-menu .svg-menu-toggle {
       min-height: 46px;
       margin:2px 0;
     }
-    a.active, a:focus{
+    a:last-of-type{
+      margin-right:2px;
+    }
+    a.active, a.focus-visible:focus{
       color:white;
       border-bottom:1px solid white;
     }
-    a:hover, a:focus{
+    a:hover, a.focus-visible:focus{
       color:white;
       border-bottom:1px solid white;
     }

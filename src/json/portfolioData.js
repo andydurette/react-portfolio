@@ -37,7 +37,7 @@ export const portfolioData = [
   },
   {
     "id": 4,
-    "imageUrl": "content/img/portfolio/fitness-tracker.jpg",
+    "imageUrl": "content/img/portfolio/fit.svg",
     "altText": "code quiz",
     "title": "code quiz",
     "name": "Fitness Tracker",
@@ -73,7 +73,7 @@ export const portfolioData = [
   },
   {
     "id": 7,
-    "imageUrl": "content/img/portfolio/pass-gen.jpg",
+    "imageUrl": "content/img/portfolio/pass-gen.svg",
     "altText": "Password Generator app",
     "title": "Password Generator app",
     "name": "Password Generator",
@@ -85,7 +85,7 @@ export const portfolioData = [
   },
   {
     "id": 8,
-    "imageUrl": "content/img/portfolio/30-day-challenge.jpg",
+    "imageUrl": "content/img/portfolio/30-days.svg",
     "altText": "30 day icon challenge",
     "title": "Password Generator app",
     "name": "30 day icon challenge",
@@ -97,7 +97,7 @@ export const portfolioData = [
   },
   {
     "id":9,
-    "imageUrl": "content/img/portfolio/bee.jpg",
+    "imageUrl": "content/img/portfolio/bee.svg",
     "altText": "Bees of America",
     "title": "Bees of America",
     "name": "Bees of America",
