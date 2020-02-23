@@ -12,11 +12,11 @@ const PortfolioList = () => {
       <h2>PORTFOLIO</h2>
       {portfolios.map(portfolio => (
       <div key={portfolio.id} className="portfolio-piece">
-        <div><img src={portfolio.imageUrl} alt={portfolio.alt} title={portfolio.title} loading="lazy"/></div>
+        <div><img src={portfolio.imageUrl} alt={portfolio.alt} loading="lazy"/></div>
         <h4>{portfolio.name}</h4>
         <p>{portfolio.description}</p>
         <div className="portfolio-links">
-          <a className="btn" href={portfolio.siteUrl} target="_blank" rel="noopener noreferrer" aria-label={portfolio.siteAria}>VIEW SITE</a>
+          {portfolio.siteUrl !== ('') ? <a className="btn" href={portfolio.siteUrl} target="_blank" rel="noopener noreferrer" aria-label={portfolio.siteAria}>VIEW SITE</a> : ""}   
           <a className="btn" href={portfolio.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={portfolio.repoAria}>VIEW REPO</a>
         </div>
       </div>
