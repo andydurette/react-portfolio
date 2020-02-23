@@ -1,7 +1,7 @@
 export const portfolioData = [
   {
     "id": 1,
-    "imageUrl": "content/img/portfolio/QaRds.jpg",
+    "imageUrl": "content/img/portfolio/qards.svg",
     "altText": "QaRds App business cards for a digital future",
     "title": "QaRds",
     "name": "QaRds",
