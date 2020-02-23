@@ -23,7 +23,7 @@ export const expertiseData = [
       [4,'content/img/logos/bootstrap-icon.svg', 'Twitter Bootstrap, a front end library'],
       [5,'content/img/logos/js-icon.svg', 'Vanilla (plain) Javascript'],
       [6,'content/img/logos/jquery-icon.svg', 'jQuery javascript framework'],
-      [7,'content/img/logos/node-icon.svg', 'Node.js a JavaScript run-time environment that executes code outside a browser.'],
+      [7,'content/img/logos/node-icon.svg', 'Node.js is a JavaScript run-time environment which executes javascript outside a browser.'],
       [8,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework'],
       [9,'content/img/logos/git-icon.svg', 'Git distributed version-control system for tracking changes'],
       [10,'content/img/logos/mysql-icon.svg', 'MySQL, Structured Query Language" title="MySQL, Structured Query Language'],
