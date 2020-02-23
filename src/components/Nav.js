@@ -95,7 +95,7 @@ const Nav = () => {
 
   return(
 <nav className={ (mobileNavs === false ? '' : 'mobile-menu') + ' ' + (scrolls === false ? '' : 'scrolled')} >
-    <button className="icon" id="myMenuFunction" onClick={onClickHandler}>
+    <button className="icon" id="myMenuFunction" onClick={onClickHandler} aria-label={(mobileNavs === false) ? "Menu Closed":"Menu Open" } >
         <svg className="inline-svg" version="1.1" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 23.5 25">
             <title>Mobile Menu</title>
             <g className="svg-menu-toggle">

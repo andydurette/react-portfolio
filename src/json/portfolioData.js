@@ -13,10 +13,10 @@ export const portfolioData = [
   },
   {
     "id": 2,
-    "imageUrl": "content/img/portfolio/toronto_safety.jpg",
+    "imageUrl": "content/img/portfolio/neighbourhood.svg",
     "altText": "Toronto Neighbourhood Safety app",
-    "title": "Is My Neighbourhood Safe",
-    "name": "Is My Neighbourhood Safe",
+    "title": "Is My Neighbourhood Safe?",
+    "name": "Is My Neighbourhood Safe?",
     "description": "Application built in my University of Toronto Fullstack course, it compares crime data by neighbourhood for all of toronto.",
     "siteUrl": "https://andydurette.github.io/UFT-Project-1/",
     "siteAria": "View Toronto Neighbourhood safety portfolio website",
