@@ -67,26 +67,33 @@ const Nav = () => {
       )
     };
     
-    let ActiveCheck = (e) => {
+    let ActiveCheck = () => {
+
+      let activeMenuLink = () => {
+        Array.from(document.getElementById("anchors").children).map(x => {
+          if(x.href.includes(active)){
+            x.classList.add("active");
+          }else if(!x.href.includes(active)){
+            x.classList.remove("active");
+          }
+       });
+      }
+
       document.addEventListener("scroll", () => {
         if( IsElementXPercentInViewport(document.querySelector("#home"), 10) === true){
           setActive(active = "home");
+          activeMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#expertise"), 10) === true){
           setActive(active = "expertise");
+          activeMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 10) === true){
           setActive(active = "portfolio");
+          activeMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#contact"), 10) === true){
           setActive(active = "contact");
+          activeMenuLink();
         }
       });
-
-      Array.from(document.getElementById("anchors").children).map(x => {
-        if( x.text === active){
-         x.classList.add("active");
-        }else if(x.classList.contains("active")){
-         x.classList.remove("active");
-        }
-       });
     }
   
 
