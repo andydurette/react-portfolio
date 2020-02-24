@@ -68,7 +68,7 @@ export const portfolioData = [
     "description": "Node CLI Application built in my University of Toronto Fullstack course, updates a mySQL database of employee info.",
     "siteUrl": "",
     "siteAria": "View Employee tracker app",
-    "repoUrl": "https://github.com/andydurette/Employee-Trackerr",
+    "repoUrl": "https://github.com/andydurette/Employee-Tracker",
     "repoAria": "View Employee tracker app",
   },
   {

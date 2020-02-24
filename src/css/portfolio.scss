@@ -21,6 +21,7 @@
     
     .portfolio-piece{
       width:100%;
+      margin-top:25px;
       h4{
         margin-top: 15px;
         margin-bottom: 5px;
@@ -56,8 +57,7 @@
         border-color: #10707f;
       }
       img{
-        border-radius:5px;
-        width:100%;
+        width:90%;
       }
     }
   }
@@ -80,7 +80,7 @@
       flex-direction: column;
       padding:15px;
       div img{
-        width:100%;
+        width:90%;
       }
       .portfolio-links{
         flex-direction:row;

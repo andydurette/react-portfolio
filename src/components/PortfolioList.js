@@ -12,7 +12,7 @@ const PortfolioList = () => {
       <h2>PORTFOLIO</h2>
       {portfolios.map(portfolio => (
       <div key={portfolio.id} className="portfolio-piece">
-        <div><img src={portfolio.imageUrl} alt={portfolio.alt} loading="lazy"/></div>
+        <div><img src={portfolio.imageUrl} alt={portfolio.altText} loading="lazy"/></div>
         <h4>{portfolio.name}</h4>
         <p>{portfolio.description}</p>
         <div className="portfolio-links">
