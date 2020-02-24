@@ -117,28 +117,28 @@ const Nav = () => {
         href='#home' 
         onClick={onClickHandler} 
         tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }
-        className={` ${(active === "home" ) ? 'active' : ''} `}
+        active={active === "home" ? 'active' : ''}
        >HOME
       </AnchorLink>
       <AnchorLink 
         href='#expertise' 
         onClick={onClickHandler} 
         tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}
-        className={` ${(active === "expertise" ) ? 'active' : ''} `}
+        active={active === "expertise"  ? 'active' : ''}
         >EXPERTISE
       </AnchorLink>
       <AnchorLink 
         href='#portfolio'  
         onClick={onClickHandler} 
         tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}
-        className={` ${(active === "portfolio" ) ? 'active' : ''} `}
+        active={active === "portfolio" ? 'active' : ''}
         >PORTFOLIO
       </AnchorLink>
       <AnchorLink 
         href='#contact' 
         onClick={onClickHandler} 
         tabIndex={(mobileNavs === false && inMobile !== false ) ? "-1":"0"}
-       className={` ${(active === "contact" ) ? 'active' : ''} `}
+        active={active === "contact" ? 'active' : ''}
         >CONTACT
       </AnchorLink>
     </div>

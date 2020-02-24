@@ -23,7 +23,7 @@ nav {
     border-bottom: 1px solid transparent;
     margin:2px;
   } 
-  a.active {
+  a[active="active"] { 
     color: $color-focus-blue;
     border-bottom:1px solid $color-focus-blue;
   }
@@ -152,7 +152,7 @@ nav.mobile-menu .svg-menu-toggle {
     a:last-of-type{
       margin-right:2px;
     }
-    a.active{
+    a[active="active"]{
       color:white;
       border-bottom:1px solid white;
     }
@@ -173,7 +173,7 @@ nav.mobile-menu .svg-menu-toggle {
     min-height: 53px;
     padding-top: 1px;
     background-color: #262625;
-    a.active{
+    a[active="active"]{
       border-bottom: solid transparent;
       color: $color-focus-blue;
     }

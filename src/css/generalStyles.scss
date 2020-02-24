@@ -34,6 +34,12 @@ html,body{
   but it will still show up on keyboard focus.
 */
 
-:focus{
- outline: 2px solid $color-honey-gold;
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {
+  outline: none;
+}
+
+/* Optional: Customize .focus-visible */
+.focus-visible {
+  outline: 2px solid $color-honey-gold;
 }
