@@ -82,16 +82,16 @@ const Nav = () => {
       document.addEventListener("scroll", () => {
         if( IsElementXPercentInViewport(document.querySelector("#home"), 10) === true){
           setActive(active = "home");
-          activeMenuLink();
+          //activeMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#expertise"), 10) === true){
           setActive(active = "expertise");
-          activeMenuLink();
+          //activeMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 10) === true){
           setActive(active = "portfolio");
-          activeMenuLink();
+          //activeMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#contact"), 10) === true){
           setActive(active = "contact");
-          activeMenuLink();
+          //activeMenuLink();
         }
       });
     }
@@ -123,10 +123,34 @@ const Nav = () => {
         </svg>
     </button>
     <div id="anchors">
-      <AnchorLink href='#home' onClick={onClickHandler} tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }>HOME</AnchorLink>
-      <AnchorLink href='#expertise' onClick={onClickHandler} tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}>EXPERTISE</AnchorLink>
-      <AnchorLink href='#portfolio'  onClick={onClickHandler} tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}>PORTFOLIO</AnchorLink>
-      <AnchorLink href='#contact'  onClick={onClickHandler} tabIndex={(mobileNavs === false && inMobile !== false ) ? "-1":"0"}>CONTACT</AnchorLink>
+      <AnchorLink 
+        href='#home' 
+        onClick={onClickHandler} 
+        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }
+        className={` ${(active === "home" ) ? ' active' : ''} `}
+       >HOME
+      </AnchorLink>
+      <AnchorLink 
+        href='#expertise' 
+        onClick={onClickHandler} 
+        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}
+        className={` ${(active === "expertise" ) ? ' active' : ''} `}
+        >EXPERTISE
+      </AnchorLink>
+      <AnchorLink 
+        href='#portfolio'  
+        onClick={onClickHandler} 
+        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}
+        className={` ${(active === "portfolio" ) ? ' active' : ''} `}
+        >PORTFOLIO
+      </AnchorLink>
+      <AnchorLink 
+        href='#contact' 
+        onClick={onClickHandler} 
+        tabIndex={(mobileNavs === false && inMobile !== false ) ? "-1":"0"}
+        className={` ${(active === "contact" ) ? ' active' : ''} `}
+        >CONTACT
+      </AnchorLink>
     </div>
 </nav>
   )
