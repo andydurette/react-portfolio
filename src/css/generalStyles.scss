@@ -35,9 +35,5 @@ html,body{
 */
 
 :focus{
-  outline: 2px solid $color-honey-gold;
-}
-
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
+ outline: 2px solid $color-honey-gold;
 }

@@ -152,11 +152,11 @@ nav.mobile-menu .svg-menu-toggle {
     a:last-of-type{
       margin-right:2px;
     }
-    a.active /* ,a.focus-visible:focus */{
+    a.active{
       color:white;
       border-bottom:1px solid white;
     }
-    a:hover /* ,a.focus-visible:focus */{
+    a:hover{
       color:white;
       border-bottom:1px solid white;
     }
@@ -183,7 +183,6 @@ nav.mobile-menu .svg-menu-toggle {
     }
     a:focus{
       border-bottom: solid transparent;
-      //color: $color-focus-blue;
     }
   }
 }

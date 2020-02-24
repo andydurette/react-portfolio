@@ -5,6 +5,7 @@ import Home from './components/Home'
 import ExpertiseList from './components/ExpertiseList';
 import PortfolioList from './components/PortfolioList';
 import Contact from './components/Contact';
+import 'remove-focus-outline';
 
 //Added for accessibility makes focus ring only when tabbing
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <AppProvider> 
       {/* Add js-focus-visible to listen if someone uses keyboard focus touse website */}
-      <div className="App js-focus-visible">
+      <div>
         <Nav />
         <Home />
         <ExpertiseList />
