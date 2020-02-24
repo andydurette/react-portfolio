@@ -89,7 +89,8 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 175px;
+  width: 140px;
+  margin-left: -70px;
   background-color: #212529;
   color: #fff;
   text-align: center;
@@ -99,7 +100,6 @@
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -88px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -143,6 +143,11 @@
       }
     }
   }
+  }
+
+  .tooltip .tooltiptext {
+    width: 176px;
+    margin-left: -88px;
   }
 }
 
