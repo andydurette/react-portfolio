@@ -66,34 +66,37 @@ const Nav = () => {
         Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
       )
     };
-    
-    let ActiveCheck = () => {
 
-      let activeMenuLink = () => {
-        Array.from(document.getElementById("anchors").children).map(x => {
-          if(x.href.includes(active)){
-            x.classList.add("active");
-          }else if(!x.href.includes(active)){
-            x.classList.remove("active");
-          }
-       });
-      }
+    let ActiveMenuLink = () => {
+      Array.from(document.getElementById("anchors").children).map(x => {
+        if(x.href.includes(active)){
+          x.classList.add("active");
+        }else if(!x.href.includes(active)){
+          x.classList.remove("active");
+        }
+     });
+    }
 
+    let ActiveSetter = () => {
       document.addEventListener("scroll", () => {
         if( IsElementXPercentInViewport(document.querySelector("#home"), 10) === true){
           setActive(active = "home");
-          //activeMenuLink();
+          ActiveMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#expertise"), 10) === true){
           setActive(active = "expertise");
-          //activeMenuLink();
+          ActiveMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 10) === true){
           setActive(active = "portfolio");
-          //activeMenuLink();
+          ActiveMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#contact"), 10) === true){
           setActive(active = "contact");
-          //activeMenuLink();
+          ActiveMenuLink();
         }
       });
+    }
+    
+    let ActiveCheck = () => {
+      ActiveSetter();
     }
   
 
@@ -102,6 +105,7 @@ const Nav = () => {
   useEffect(() => {
     if(window.scrollY >= 120) setScrolls( scrolls === false ? true: false);
     if(window.innerWidth < 900) setScrolls( scrolls === false ? true: false);
+    ActiveMenuLink();
     ActiveCheck();
     inMobileCheck();
     window.addEventListener("scroll", scrolled);
@@ -127,28 +131,28 @@ const Nav = () => {
         href='#home' 
         onClick={onClickHandler} 
         tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }
-        className={` ${(active === "home" ) ? ' active' : ''} `}
+        //className={` ${(active === "home" ) ? ' active' : ''} `}
        >HOME
       </AnchorLink>
       <AnchorLink 
         href='#expertise' 
         onClick={onClickHandler} 
         tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}
-        className={` ${(active === "expertise" ) ? ' active' : ''} `}
+        //className={` ${(active === "expertise" ) ? ' active' : ''} `}
         >EXPERTISE
       </AnchorLink>
       <AnchorLink 
         href='#portfolio'  
         onClick={onClickHandler} 
         tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}
-        className={` ${(active === "portfolio" ) ? ' active' : ''} `}
+        //className={` ${(active === "portfolio" ) ? ' active' : ''} `}
         >PORTFOLIO
       </AnchorLink>
       <AnchorLink 
         href='#contact' 
         onClick={onClickHandler} 
         tabIndex={(mobileNavs === false && inMobile !== false ) ? "-1":"0"}
-        className={` ${(active === "contact" ) ? ' active' : ''} `}
+       //className={` ${(active === "contact" ) ? ' active' : ''} `}
         >CONTACT
       </AnchorLink>
     </div>
