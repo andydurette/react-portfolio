@@ -26,7 +26,7 @@ export const expertiseData = [
       [7,'content/img/logos/node-icon.svg', 'Node.js is a JavaScript run-time environment which executes javascript outside a browser.'],
       [8,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework'],
       [9,'content/img/logos/git-icon.svg', 'Git distributed version-control system for tracking changes'],
-      [10,'content/img/logos/mysql-icon.svg', 'MySQL, Structured Query Language" title="MySQL, Structured Query Language'],
+      [10,'content/img/logos/mysql-icon.svg', 'MySQL, Structured Query Language'],
       [11,'content/img/logos/mongodb-icon.svg', 'MongoDB noSQL database technology']
     ]
   },

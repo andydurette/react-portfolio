@@ -67,30 +67,16 @@ const Nav = () => {
       )
     };
 
-    let ActiveMenuLink = () => {
-      Array.from(document.getElementById("anchors").children).map(x => {
-        if(x.href.includes(active)){
-          x.classList.add("active");
-        }else if(!x.href.includes(active)){
-          x.classList.remove("active");
-        }
-     });
-    }
-
     let ActiveSetter = () => {
       document.addEventListener("scroll", () => {
         if( IsElementXPercentInViewport(document.querySelector("#home"), 10) === true){
           setActive(active = "home");
-          //ActiveMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#expertise"), 10) === true){
           setActive(active = "expertise");
-          //ActiveMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 10) === true){
           setActive(active = "portfolio");
-          //ActiveMenuLink();
         }else if( IsElementXPercentInViewport(document.querySelector("#contact"), 10) === true){
           setActive(active = "contact");
-          //ActiveMenuLink();
         }
       });
     }
