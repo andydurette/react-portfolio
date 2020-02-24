@@ -1,26 +1,22 @@
 import React, {useContext, useEffect} from 'react';
-import { AppContext } from './AppContext';
+import { AppContext } from '../utils/AppContext';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-//import ActiveCheck from './ActiveCheck';
 
 
 const Nav = () => {
 
   /********************************************* Start of Initialize context state elements *********************************************/
+
+  // Call Context 
+  const {mobileNav, scroll, navActive, navInMobile} = useContext(AppContext);
   // Handle mobile class for operating menu
-  const {mobileNav} = useContext(AppContext);
   let [mobileNavs, setMobileNavs] = mobileNav;
   // Handles checking wheather the nav should change look based on window scroll position
-  const {scroll} = useContext(AppContext);
   let [scrolls, setScrolls] = scroll;
   // Handle setting active class one navbar element
-  const {navActive} = useContext(AppContext);
   let [active, setActive] = navActive;
   // Navigation Assesibility
-  const {navInMobile} = useContext(AppContext);
   let [inMobile, setinMobile] = navInMobile;
-
-  
 
   /********************************************* End of Initialize context state elements *********************************************/
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppProvider} from './components/AppContext';
+import {AppProvider} from './utils/AppContext';
 import Nav from './components/Nav'
 import Home from './components/Home'
 import ExpertiseList from './components/ExpertiseList';
