@@ -54,12 +54,15 @@ nav {
 }
 
 //Mobile navigation
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 900px) {
   nav div{
     height: auto;
     max-height: 0;
     margin-top:53px;
-    transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease-out; 
+    a{
+      display:none;
+    }
   }
   
   nav.mobile-menu {
@@ -127,11 +130,6 @@ nav.mobile-menu .svg-menu-toggle {
   display:block;
   margin:0 auto;
 }
-
-
-
-
-
 
 @media screen and (min-width: 900px) {
   // Undo base styles

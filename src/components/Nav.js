@@ -1,6 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import { AppContext } from '../utils/AppContext';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import IsElementXPercentInViewport from '../utils/IsElementXPercentInViewport';
 
 
 const Nav = () => {
@@ -15,12 +16,11 @@ const Nav = () => {
   let [scrolls, setScrolls] = scroll;
   // Handle setting active class one navbar element
   let [active, setActive] = navActive;
-  // Navigation Assesibility
-  let [inMobile, setinMobile] = navInMobile;
 
   /********************************************* End of Initialize context state elements *********************************************/
 
-  // Navigation mobile menu controller
+
+  // Navigation mobile menu controller upon clicking the hamburger menu
   const onClickHandler = (e) => {
     e.preventDefault();
     if (e.target.href !== undefined){
@@ -30,41 +30,12 @@ const Nav = () => {
     }
   }
 
-  // Navigation Assesibility mobile menu controller
-  const scrolled = () => {
-    if(window.scrollY >= 120){
-        setScrolls( scrolls = true);
-      }else{
-        setScrolls( scrolls = false);
-      }
-    } 
- 
+  // Homepage specific styles controller based upon scroll effects
 
-  // Homepage specific style checker
-  const inMobileCheck = () => {
-  if(window.innerWidth < 900){
-      setinMobile( inMobile = true);
-    }else{
-      setinMobile( inMobile = false);
-      setMobileNavs( mobileNavs = false);
-    }
-  }  
-
-
-  // Homepage specific style checker until scrolled out of section
-  const IsElementXPercentInViewport = function(el, percentVisible) {
-    let
-      rect = el.getBoundingClientRect(),
-      windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-  
-      return !(
-        Math.floor(100 - (((rect.top >= 0 ? 0 : rect.top) / +-(rect.height / 1)) * 100)) < percentVisible ||
-        Math.floor(100 - ((rect.bottom - windowHeight) / rect.height) * 100) < percentVisible
-      )
-    };
 
     let ActiveSetter = () => {
       document.addEventListener("scroll", () => {
+        // Checks which nav element should be active
         if( IsElementXPercentInViewport(document.querySelector("#home"), 10) === true){
           setActive(active = "home");
         }else if( IsElementXPercentInViewport(document.querySelector("#expertise"), 10) === true){
@@ -74,24 +45,25 @@ const Nav = () => {
         }else if( IsElementXPercentInViewport(document.querySelector("#contact"), 10) === true){
           setActive(active = "contact");
         }
+
+        // Checks nav style should change
+        if(window.scrollY >= 120){
+          setScrolls( scrolls = true);
+        }else{
+          setScrolls( scrolls = false);
+        }
+
       });
     }
-    
-    let ActiveCheck = () => {
-      ActiveSetter();
-    }
-  
 
   /********************************************* Call lifecycle methods *********************************************/
 
   useEffect(() => {
+    // Check initial window to adjust state 
     if(window.scrollY >= 120) setScrolls( scrolls === false ? true: false);
     if(window.innerWidth < 900) setScrolls( scrolls === false ? true: false);
-    //ActiveMenuLink();
-    ActiveCheck();
-    inMobileCheck();
-    window.addEventListener("scroll", scrolled);
-    window.addEventListener("resize", inMobileCheck);
+    // Add event Listener for both events
+    ActiveSetter();
   }, []);
 
 
@@ -112,28 +84,24 @@ const Nav = () => {
       <AnchorLink 
         href='#home' 
         onClick={onClickHandler} 
-        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }
         active={active === "home" ? 'active' : ''}
        >HOME
       </AnchorLink>
       <AnchorLink 
         href='#expertise' 
         onClick={onClickHandler} 
-        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}
         active={active === "expertise"  ? 'active' : ''}
         >EXPERTISE
       </AnchorLink>
       <AnchorLink 
         href='#portfolio'  
         onClick={onClickHandler} 
-        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"}
         active={active === "portfolio" ? 'active' : ''}
         >PORTFOLIO
       </AnchorLink>
       <AnchorLink 
         href='#contact' 
         onClick={onClickHandler} 
-        tabIndex={(mobileNavs === false && inMobile !== false ) ? "-1":"0"}
         active={active === "contact" ? 'active' : ''}
         >CONTACT
       </AnchorLink>
