@@ -13,7 +13,7 @@ const Contact = () => {
             <img src="content/img/social-icons/mixer.svg" alt="Mixer" width="200px" height="200px" />
           </div>
           <div id="contact-info">
-            <p>Feel free to look through my professional profiles and social media linked below. Get an idea of who I am in my professional and personal life and get in touch if I fit what you're looking for.</p>
+            <p>Feel free to look through my professional profiles and social media links below. Please contact me if you enjoy my work and feel I would be an asset to your team or an ideal candidate to work on your next project.</p>
             <div className="contact-item">
               <img src="content/img/logos/phone.svg" alt="phone" width="25px" height="25px" />
               <p>647-607-7597</p>
