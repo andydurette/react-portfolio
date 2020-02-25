@@ -23,7 +23,7 @@
       font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
       color: #212529;
       font-weight: 700;
-      text-align:left;
+      text-align:center;
     }
     
     .expertise-piece{
@@ -130,17 +130,15 @@
 
   #expertise{
   #expertise-grid{
+    .expertise-piece:nth-of-type(1){
+      margin:0 auto 0 auto;
+    }
     .expertise-piece{
       display: flex;
       width: 80%;
-      margin:0 auto;
+      margin:40px auto 0 auto;
       flex-direction: column;
       padding:15px;
-      .expertise-piece{
-        .btn:nth-of-type(1){
-          margin-right:20px;
-        }
-      }
     }
   }
   }
@@ -158,6 +156,9 @@
       margin:0 auto;
       flex-wrap: wrap;
       flex-direction: row;
+      .expertise-piece{
+        margin:0 auto;
+      }
       .expertise-piece{
         width: 33%;
       }

@@ -14,7 +14,7 @@ const ExpertiseList = () => {
         <div><img src={expertise.icon} alt={expertise.alt} width="50px" height="50px" loading="lazy"/></div>
         <h5>{expertise.heading}</h5>
         <p>{expertise.copy}</p>
-        <p className="skillset-heading">SKILLSET</p>
+        <p className="skillset-heading">SKILL SET</p>
         <div className="expertise-icons">
           {expertise.skills.map((skill,index) => (
             <div className="tooltip" key={index} >

@@ -9,7 +9,7 @@ const Nav = () => {
   /********************************************* Start of Initialize context state elements *********************************************/
 
   // Call Context 
-  const {mobileNav, scroll, navActive, navInMobile} = useContext(AppContext);
+  const {mobileNav, scroll, navActive} = useContext(AppContext);
   // Handle mobile class for operating menu
   let [mobileNavs, setMobileNavs] = mobileNav;
   // Handles checking wheather the nav should change look based on window scroll position
