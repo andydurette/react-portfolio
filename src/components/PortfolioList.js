@@ -12,7 +12,7 @@ const PortfolioList = () => {
       {portfolio[0].map(portfolio => (
       <div key={portfolio.id} className="portfolio-piece">
         <div><img src={portfolio.imageUrl} alt={portfolio.altText} loading="lazy"/></div>
-        <h4>{portfolio.name}</h4>
+        <h3>{portfolio.name}</h3>
         <p>{portfolio.description}</p>
         <div className="portfolio-links">
           {portfolio.siteUrl !== ('') ? <a className="btn" href={portfolio.siteUrl} target="_blank" rel="noopener noreferrer" aria-label={portfolio.siteAria}>VIEW SITE</a> : ""}   
