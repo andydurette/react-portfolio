@@ -1,21 +1,22 @@
 export const expertiseData = [
   {
-  'id': 1,
-  'icon':'content/img/logos/design.svg',
-  'alt':"",
-  'heading':'Design',
-  'copy': 'I design while prioritizing pixel perfect layouts and performance; creating lightweight graphics such as svgs.',
-  'skills': [
-      [1,'content/img/logos/photoshop-icon.svg', 'Adobe Photoshop'],
-      [2,'content/img/logos/illustrator-icon.svg', 'Adobe Illlustrator']
-    ]
-  },
-  {
-    'id': 2,
-    'icon':'content/img/logos/code.svg',
+    'id': 1,
+    'icon':'content/img/logos/design.svg',
     'alt':"",
-    'heading':'Code',
-    'copy': 'I enjoy coding from scratch and exploring libraries like react, which provide inbuilt methods to aid development.',
+    'heading':'Design',
+    'copy': 'I have experience working with clients, designing layouts that align with their goals and follow accessibility guidelines.',
+    'skills': [
+        [1,'content/img/logos/photoshop-icon.svg', 'Adobe Photoshop'],
+        [2,'content/img/logos/illustrator-icon.svg', 'Adobe Illlustrator'],
+        [3,'content/img/logos/w3c-icon.svg', 'Web Content Accessibility Guidelines (WCAG)']
+      ]
+    },
+    {
+    'id': 2,
+    'icon':'content/img/logos/front-code.svg',
+    'alt':"",
+    'heading':'Front End',
+    'copy': 'I have experience coding from scratch, and utilizing libraries like react which provide inbuilt methods to aid development.',
     'skills': [
       [1,'content/img/logos/html5-icon.svg', 'Hyper Text Markup Language Version 5'],
       [2,'content/img/logos/css3-icon.svg', 'Cascading Style Sheets Version 3'],
@@ -23,21 +24,21 @@ export const expertiseData = [
       [4,'content/img/logos/bootstrap-icon.svg', 'Twitter Bootstrap, a front end library'],
       [5,'content/img/logos/js-icon.svg', 'Vanilla (plain) Javascript'],
       [6,'content/img/logos/jquery-icon.svg', 'jQuery Javascript framework'],
-      [7,'content/img/logos/node-icon.svg', 'Node.js, Javascript that executes outside of a browser.'],
-      [8,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework'],
-      [9,'content/img/logos/git-icon.svg', 'Git distributed version-control system for tracking changes'],
-      [10,'content/img/logos/mysql-icon.svg', 'MySQL, Structured Query Language'],
-      [11,'content/img/logos/mongodb-icon.svg', 'MongoDB noSQL database technology']
+      [7,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework']
     ]
   },
   {
     'id': 3,
-    'icon':'content/img/logos/ui-ux.svg',
+    'icon':'content/img/logos/back-code.svg',
     'alt':"",
-    'heading':'UI / UX',
-    'copy': 'I have experience working with clients, designing layouts that align with their goals and follow accessibility guidelines.',
+    'heading':'Back End',
+    'copy': 'I have experience working with databases and version control software to give persistence and security to applications',
     'skills': [
-        [1,'content/img/logos/w3c-icon.svg', 'Web Content Accessibility Guidelines (WCAG)'],
+      [1,'content/img/logos/node-icon.svg', 'Node.js, Javascript that executes outside of a browser.'],
+      [2,'content/img/logos/mongodb-icon.svg', 'MongoDB noSQL database technology'],
+      [3,'content/img/logos/mysql-icon.svg', 'MySQL, Structured Query Language'],
+      [4,'content/img/logos/git-icon.svg', 'Git distributed version-control system for tracking changes']
       ]
-    }
+    },  
+
 ]
