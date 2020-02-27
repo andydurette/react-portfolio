@@ -32,7 +32,7 @@ export const expertiseData = [
     'icon':'content/img/logos/back-code.svg',
     'alt':"",
     'heading':'Back End',
-    'copy': 'I have experience working with databases and version control software to give persistence and security to applications',
+    'copy': 'I have experience working with databases and version control software to give persistence and security to applications.',
     'skills': [
       [1,'content/img/logos/node-icon.svg', 'Node.js, Javascript that executes outside of a browser.'],
       [2,'content/img/logos/mongodb-icon.svg', 'MongoDB noSQL database technology'],
