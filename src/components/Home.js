@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = () => {
-
+  /*
   var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -43,6 +43,7 @@ const Home = () => {
     }, delta);
   };
   
+
   window.onload = function() {
     var elements = document.getElementsByClassName('txt-rotate');
     for (var i=0; i<elements.length; i++) {
@@ -58,6 +59,7 @@ const Home = () => {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff }";
     document.body.appendChild(css);
   };
+  */
 
   return(
     <section id="home">
@@ -65,11 +67,8 @@ const Home = () => {
         <div className="intro-container">
           <div className="intro-text">
             <div className="intro-heading">I'm Andy</div>
-            <div className="intro-lead-in">And I am a&nbsp;
-            <span
-              className="txt-rotate"
-              data-period="2000"
-              data-rotate='[ "Full Stack Developer", "Web & Graphic Designer", "Amateur Cook & Baker", "Life Long Learner" ]'></span></div>
+            <div className="intro-lead-in">A React &amp; Node JS Full Stack Developer</div>
+            {/* <span className="txt-rotate" data-period="2000" data-rotate='[ "Full Stack Developer", "Web & Graphic Designer", "Amateur Cook & Baker", "Life Long Learner" ]'></span> */}
             </div>
         </div>
       </div>
