@@ -10,6 +10,7 @@ export const AppProvider = props => {
   const [mobileNav, setMobileNav] = useState(false);
   const [scroll, setScroll] = useState(false);
   const [active, setActive] = useState("home");
+  const [inMobile, setinMobile] = useState(true);
 
 
   return(
@@ -18,7 +19,8 @@ export const AppProvider = props => {
       expertise: [expertise, setExperience], 
       mobileNav: [mobileNav, setMobileNav], 
       scroll: [scroll, setScroll],
-      navActive: [active, setActive]
+      navActive: [active, setActive],
+      navInMobile: [inMobile, setinMobile]
        }}>
       {props.children}
     </AppContext.Provider>

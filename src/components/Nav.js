@@ -9,13 +9,15 @@ const Nav = () => {
   /********************************************* Start of Initialize context state elements *********************************************/
 
   // Call Context 
-  const {mobileNav, scroll, navActive} = useContext(AppContext);
+  const {mobileNav, scroll, navActive, navInMobile} = useContext(AppContext);
   // Handle mobile class for operating menu
   let [mobileNavs, setMobileNavs] = mobileNav;
   // Handles checking wheather the nav should change look based on window scroll position
   let [scrolls, setScrolls] = scroll;
   // Handle setting active class one navbar element
   let [active, setActive] = navActive;
+  // Navigation Accessibility
+  let [inMobile, setinMobile] = navInMobile;
 
   /********************************************* End of Initialize context state elements *********************************************/
 
@@ -56,6 +58,16 @@ const Nav = () => {
       });
     }
 
+  // MobileNav specific styles controller based upon scroll effects
+  const inMobileCheck = () => {
+    if(window.innerWidth < 900){
+        setinMobile( inMobile = true);
+      }else{
+        setinMobile( inMobile = false);
+        setMobileNavs( mobileNavs = false);
+      }
+    }  
+
   /********************************************* Call lifecycle methods *********************************************/
 
   useEffect(() => {
@@ -64,6 +76,9 @@ const Nav = () => {
     if(window.innerWidth < 900) setScrolls( scrolls === false ? true: false);
     // Add event Listener for both events
     ActiveSetter();
+    //tab check
+    inMobileCheck();
+    window.addEventListener("resize", inMobileCheck);
   }, []);
 
 
@@ -85,24 +100,28 @@ const Nav = () => {
         href='#home' 
         onClick={onClickHandler} 
         active={active === "home" ? 'active' : ''}
+        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }
        >HOME
       </AnchorLink>
       <AnchorLink 
         href='#expertise' 
         onClick={onClickHandler} 
         active={active === "expertise"  ? 'active' : ''}
+        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }
         >EXPERTISE
       </AnchorLink>
       <AnchorLink 
         href='#portfolio'  
         onClick={onClickHandler} 
         active={active === "portfolio" ? 'active' : ''}
+        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }
         >PORTFOLIO
       </AnchorLink>
       <AnchorLink 
         href='#contact' 
         onClick={onClickHandler} 
         active={active === "contact" ? 'active' : ''}
+        tabIndex={(mobileNavs === false && inMobile !== false) ? "-1":"0"  }
         >CONTACT
       </AnchorLink>
     </div>
