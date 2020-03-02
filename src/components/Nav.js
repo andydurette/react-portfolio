@@ -79,6 +79,7 @@ const Nav = () => {
     //tab check
     inMobileCheck();
     window.addEventListener("resize", inMobileCheck);
+    // eslint-disable-next-line
   }, []);
 
 
