@@ -13,7 +13,7 @@ export const portfolioData = [
   },
   {
     "id": 2,
-    "imageUrl": "content/img/portfolio/neighbourhood.svg",
+    "imageUrl": "content/img/portfolio/neighbourhood-3.svg",
     "altText": "Toronto Neighbourhood Safety app",
     "title": "Is My Neighbourhood Safe?",
     "name": "Is My Neighbourhood Safe?",
