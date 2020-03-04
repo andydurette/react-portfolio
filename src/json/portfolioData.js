@@ -8,7 +8,7 @@ export const portfolioData = [
     "description": "Application that creates digital business cards for account users, using node for authentication and mysql to store the data.",
     "siteUrl": "https://business-qard.herokuapp.com/",
     "siteAria": "View the QaRds portfolio website",
-    "repoUrl": "https://business-qard.herokuapp.com/",
+    "repoUrl": "https://github.com/jondam1985/business-QaRd",
     "repoAria": "View the QaRds github repository",
   },
   {
@@ -20,7 +20,7 @@ export const portfolioData = [
     "description": "Application that compares crime data by neighbourhood for all of Toronto from 2014 forward, built with HTML,CSS & JS.",
     "siteUrl": "https://andydurette.github.io/UFT-Project-1/",
     "siteAria": "View Toronto Neighbourhood safety portfolio website",
-    "repoUrl": "https://github.com/jondam1985/business-QaRd",
+    "repoUrl": "https://github.com/andydurette/UFT-Project-1",
     "repoAria": "View Toronto Neighbourhood safety github repository",
   },
   {
