@@ -20,7 +20,7 @@ export const portfolioData = [
     "description": "Application that compares crime data by neighbourhood for all of Toronto from 2014 forward, built with HTML,CSS & JS.",
     "siteUrl": "https://andydurette.github.io/UFT-Project-1/",
     "siteAria": "View Toronto Neighbourhood safety portfolio website",
-    "repoUrl": "https://github.com/andydurette/UFT-Project-1",
+    "repoUrl": "https://github.com/jondam1985/business-QaRd",
     "repoAria": "View Toronto Neighbourhood safety github repository",
   },
   {
