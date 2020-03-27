@@ -16,7 +16,7 @@ export const expertiseData = [
     'icon':'content/img/logos/front-code.svg',
     'alt':"",
     'heading':'Front End',
-    'copy': 'I have experience coding from scratch, and utilizing libraries like react which provide inbuilt methods to aid development.',
+    'copy': 'I have experience coding from scratch, and utilizing libraries like react which provide methods to aid development.',
     'skills': [
       [1,'content/img/logos/html5-icon.svg', 'Hyper Text Markup Language Version 5'],
       [2,'content/img/logos/css3-icon.svg', 'Cascading Style Sheets Version 3'],
