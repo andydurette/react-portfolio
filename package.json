@@ -14,7 +14,7 @@
     "react-scripts": "3.3.1",
     "remove-focus-outline": "^1.2.1"
   },
-  "homepage":"https://andydurette.com",
+  "homepage": "https://andydurette.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -36,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
