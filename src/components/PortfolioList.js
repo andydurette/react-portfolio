@@ -1,15 +1,17 @@
 import React,{useContext} from 'react';
 import { AppContext } from '../utils/AppContext';
+import PortfolioFilter from './PortfolioFilter';
 
 const PortfolioList = () => {
 
-  const {portfolio} = useContext(AppContext);
+  const {portfolioState} = useContext(AppContext);
 
   return(
     <section id="portfolio">
       <div id="portfolio-grid">
       <h2>PORTFOLIO</h2>
-      {portfolio[0].map(portfolio => (
+      <PortfolioFilter/>
+      {portfolioState[0].map(portfolio => (
       <div key={portfolio.id} className="portfolio-piece">
         <div><img src={portfolio.imageUrl} alt={portfolio.altText} loading="lazy"/></div>
         <h3>{portfolio.name}</h3>

@@ -9,7 +9,7 @@ const Home = () => {
     query: '(min-width: 901px)'
   })
 
-  console.log(isDesktopOrLaptop)
+  //console.log(isDesktopOrLaptop)
   return(
 
 

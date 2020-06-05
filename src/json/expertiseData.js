@@ -24,7 +24,9 @@ export const expertiseData = [
       [4,'content/img/logos/bootstrap-icon.svg', 'Twitter Bootstrap, a front end library'],
       [5,'content/img/logos/js-icon.svg', 'Vanilla (plain) Javascript'],
       [6,'content/img/logos/jquery-icon.svg', 'jQuery Javascript framework'],
-      [7,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework']
+      [7,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework'],
+      [8,'content/img/logos/redux-icon.svg', 'Redux is an open-source JavaScript library for managing application state.'],
+      [9,'content/img/logos/jest-icon.svg', 'Jest is a JavaScript testing framework.']
     ]
   },
   {

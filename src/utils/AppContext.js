@@ -15,8 +15,8 @@ export const AppProvider = props => {
 
   return(
     <AppContext.Provider value={{ 
-      portfolio: [portfolio, setPortfolio],
-      expertise: [expertise, setExperience], 
+      portfolioState: [portfolio, setPortfolio],
+      expertiseState: [expertise, setExperience], 
       mobileNav: [mobileNav, setMobileNav], 
       scroll: [scroll, setScroll],
       navActive: [active, setActive],

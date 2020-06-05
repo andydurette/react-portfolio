@@ -1,3 +1,5 @@
+// All tags in capitals to make checking easier
+
 export const portfolioData = [
   {
     "id": 1,
@@ -10,6 +12,7 @@ export const portfolioData = [
     "siteAria": "View the QaRds portfolio website",
     "repoUrl": "https://github.com/jondam1985/business-QaRd",
     "repoAria": "View the QaRds github repository",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "MYSQL", "SASS"],
   },
   {
     "id": 2,
@@ -22,6 +25,7 @@ export const portfolioData = [
     "siteAria": "View Toronto Neighbourhood safety portfolio website",
     "repoUrl": "https://github.com/andydurette/Toronto-Neighborhood-Safety",
     "repoAria": "View Toronto Neighbourhood safety github repository",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "SASS"],
   },
   {
     "id": 3,
@@ -34,6 +38,7 @@ export const portfolioData = [
     "siteAria": "MERN Stack Google Books website",
     "repoUrl": "https://github.com/andydurette/Google-Books-Search",
     "repoAria": "MERN Stack Google Books repository",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "MERN", "MONGODB", "REACT", "SASS"],
   },
   {
     "id": 4,
@@ -46,6 +51,7 @@ export const portfolioData = [
     "siteAria": "View React.js Weather App portfolio website",
     "repoUrl": "https://github.com/andydurette/openweather-react",
     "repoAria": "View React.js Weather App portfolio repo",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT"],
   },
   {
     "id": 5,
@@ -58,6 +64,7 @@ export const portfolioData = [
     "siteAria": "View Team Profile App",
     "repoUrl": "https://github.com/andydurette/team-profile-generator",
     "repoAria": "View the Team Profile App repository",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS"],
   },
   {
     "id": 6,
@@ -70,6 +77,7 @@ export const portfolioData = [
     "siteAria": "View Employee tracker app",
     "repoUrl": "https://github.com/andydurette/Employee-Tracker",
     "repoAria": "View Employee tracker app",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "MYSQL"],
   },
   {
     "id": 7,
@@ -82,6 +90,7 @@ export const portfolioData = [
     "siteAria": "View password generator website",
     "repoUrl": "https://github.com/andydurette/password-generator",
     "repoAria": "View password-generator github repository",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT"],
   },
   {
     "id": 8,
@@ -94,6 +103,7 @@ export const portfolioData = [
     "siteAria": "View 30 Day Icon Challenge portfolio website",
     "repoUrl": "https://github.com/andydurette/icon-gallery",
     "repoAria": "View 30 Day Icon Challenge portfolio repo",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "ILLUSTRATOR", "UI/UX"],
   },
   {
     "id":9,
@@ -106,9 +116,19 @@ export const portfolioData = [
     "siteAria": "View Bees of America portfolio website",
     "repoUrl": "https://github.com/andydurette/Bees",
     "repoAria": "View Bees of America portfolio website",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "ILLUSTRATOR", "SASS"],
+  },
+  {
+    "id":10,
+    "imageUrl": "content/img/portfolio/open-table.svg",
+    "altText": "Open Table",
+    "title": "Open Table",
+    "name": "Open Table",
+    "description": "Built for a Technical Assessment, I used React.js, Redux & Jest to build and test a resturant lookup app.",
+    "siteUrl": "https://bees-react.netlify.com/",
+    "siteAria": "View Open Table portfolio website",
+    "repoUrl": "https://github.com/andydurette/Bees",
+    "repoAria": "View Open Table portfolio website",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "REDUX", "JEST", "SASS"],
   }
 ]
-
-
-
-

@@ -1,0 +1,18 @@
+#portfolio-filter{
+  width: 100%;
+  float: right; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  div{
+    background-color: #117a8b;
+    padding: 8px 8px;
+    border-radius: 5px;
+  }
+  #portfolio-filter-input{
+    margin-left:5px;
+    padding:5px;
+    border-radius:5px;
+    border: 0px solid transparent;
+  }
+}
