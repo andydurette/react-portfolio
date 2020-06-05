@@ -77,7 +77,7 @@ export const portfolioData = [
     "siteAria": "View Employee tracker app",
     "repoUrl": "https://github.com/andydurette/Employee-Tracker",
     "repoAria": "View Employee tracker app",
-    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "MYSQL"],
+    "tags" : ["JAVASCRIPT", "NODE", "EXPRESS", "MYSQL"],
   },
   {
     "id": 7,
