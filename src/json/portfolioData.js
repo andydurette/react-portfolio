@@ -125,9 +125,9 @@ export const portfolioData = [
     "title": "Open Table",
     "name": "Open Table",
     "description": "Built for a Technical Assessment, I used React.js, Redux & Jest to build and test a resturant lookup app.",
-    "siteUrl": "https://bees-react.netlify.com/",
+    "siteUrl": "https://opentable-bmo-redux-example.herokuapp.com/",
     "siteAria": "View Open Table portfolio website",
-    "repoUrl": "https://github.com/andydurette/Bees",
+    "repoUrl": "https://github.com/andydurette/opentable-redux",
     "repoAria": "View Open Table portfolio website",
     "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "REDUX", "JEST", "SASS"],
   }
