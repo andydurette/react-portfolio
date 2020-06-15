@@ -142,6 +142,6 @@ export const portfolioData = [
     "siteAria": "View Open Table portfolio website",
     "repoUrl": "https://github.com/andydurette/nextfantasy",
     "repoAria": "View Open Table portfolio website",
-    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "NEXTJS", "JEST", "SASS", "CI/CD", "LINT", "DEVOPS"],
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "NODE", "NEXTJS", "JEST", "SASS", "CI/CD", "LINT", "DEVOPS"],
   }
 ]
