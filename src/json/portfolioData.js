@@ -130,5 +130,18 @@ export const portfolioData = [
     "repoUrl": "https://github.com/andydurette/opentable-redux",
     "repoAria": "View Open Table portfolio website",
     "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "REDUX", "JEST", "SASS"],
+  },
+  {
+    "id":11,
+    "imageUrl": "content/img/portfolio/nextfantasy.svg",
+    "altText": "Next Fantasy",
+    "title": "Next Fantasy",
+    "name": "Next Fantasy",
+    "description": "Tabletop fantasy site built utilizing next.js dynamic routing, as well as devops practices such as CI/CD pipeline.",
+    "siteUrl": "https://nextfantasy.herokuapp.com/",
+    "siteAria": "View Open Table portfolio website",
+    "repoUrl": "https://github.com/andydurette/nextfantasy",
+    "repoAria": "View Open Table portfolio website",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "NEXTJS", "JEST", "SASS", "CI/CD", "LINT", "DEVOPS"],
   }
 ]
