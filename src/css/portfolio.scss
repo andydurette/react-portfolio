@@ -57,8 +57,8 @@
         border-color: #10707f;
       }
       img{
-        width:85%;
-        margin-left:7.5%;
+        width:80%;
+        margin-left:10%;
       }
     }
   }
@@ -80,9 +80,6 @@
       width: 50%;
       flex-direction: column;
       padding:0 15px;
-      div img{
-        width:85%;
-      }
       .portfolio-links{
         flex-direction:row;
         .btn:nth-of-type(1){
