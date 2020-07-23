@@ -11,6 +11,7 @@ const {portfolioState,portShow1,portShow2,portShow3,portShow4,portShow5,portShow
 
 const portArray = [portShow1[0],portShow2[0],portShow3[0],portShow4[0],portShow5[0],portShow6[0],portShow7[0], portShow8[0],portShow9[0], portShow10[0], portShow11[0]];
 
+// eslint-disable-next-line
 let [show1, setShow1] = portShow1;
 // eslint-disable-next-line
 let [show2, setShow2] = portShow2;
