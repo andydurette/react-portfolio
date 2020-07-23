@@ -47,9 +47,10 @@ let PortfolioAnimation = () => {
       setShow7(show7 = true);
       setShow8(show8 = true);
       setShow9(show9 = true);
+      openingAnimation = false;
     }, 200);
     }
-    openingAnimation = false;
+    
   })
 
   
