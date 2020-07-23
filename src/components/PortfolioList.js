@@ -30,10 +30,13 @@ let [show8, setShow8] = portShow8;
 // eslint-disable-next-line
 let [show9, setShow9] = portShow9;
 
+let openingAnimation = true;
+
 let PortfolioAnimation = () => {
   document.addEventListener("scroll", () => {
     // Checks which nav element should be active
-    if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 10) === true){
+   
+    if( IsElementXPercentInViewport(document.querySelector("#portfolio"), 10) === true && openingAnimation === true ){
       setTimeout(function(){
       setShow1(show1 = true);
       setShow2(show2 = true);
@@ -46,7 +49,10 @@ let PortfolioAnimation = () => {
       setShow9(show9 = true);
     }, 200);
     }
+    openingAnimation = false;
   })
+
+  
 }
 
 useEffect(() => {
