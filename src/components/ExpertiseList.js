@@ -40,7 +40,7 @@ const ExpertiseList = () => {
 let ExpertiseAnimation = () => {
   document.addEventListener("scroll", () => {
     // Checks which nav element should be active
-    if( IsElementXPercentInViewport(document.querySelector("#expertise"), 50) === true){
+    if( IsElementXPercentInViewport(document.querySelector("#expertise"), 10) === true){
       setToggledMarginBottom(!isToggledMarginBottom);
       setToggledMarginTop(!isToggledMarginTop);
       setToggledOpacity(!isToggledOpacity);
