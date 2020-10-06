@@ -73,7 +73,7 @@ useEffect(() => {
         <Fade show={portArray[portfolio.id - 1]}  key={portfolio.id} className={`portfolio-piece`}>
       
         <div>
-          <img src={portfolio.imageUrl} alt={portfolio.altText} loading="lazy"/>
+          <img src={portfolio.imageUrl} alt={portfolio.altText}/>
         </div>
         <h3>{portfolio.name}</h3>
         <p>{portfolio.description}</p>

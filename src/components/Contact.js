@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contact">
       <div id="contact-grid">
         <h2>CONTACT ME</h2>
-        <h4 className="section-heading">Together let's whip up something great!</h4>
+        <h3 className="section-heading">Together let's whip up something great!</h3>
         
         <div className="contact-item">
           <div>
@@ -20,7 +20,7 @@ const Contact = () => {
             </div>
             <div className="contact-item">
               <img src="content/img/logos/email.svg" alt="email" width="25px" height="25px"/>
-              <p>andy@andydurette.com</p>
+              <p>duretteandy@gmail.com</p>
             </div>
           </div>
         </div>
