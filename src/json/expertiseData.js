@@ -8,7 +8,8 @@ export const expertiseData = [
     'skills': [
         [1,'content/img/logos/photoshop-icon.svg', 'Adobe Photoshop'],
         [2,'content/img/logos/illustrator-icon.svg', 'Adobe Illlustrator'],
-        [3,'content/img/logos/w3c-icon.svg', 'Web Content Accessibility Guidelines (WCAG)']
+        [3,'content/img/logos/figma-icon.svg', 'Figma, a collaborative interface design tool.'],
+        [4,'content/img/logos/w3c-icon.svg', 'Web Content Accessibility Guidelines (WCAG)']
       ]
     },
     {
@@ -21,12 +22,14 @@ export const expertiseData = [
       [1,'content/img/logos/html5-icon.svg', 'Hyper Text Markup Language Version 5'],
       [2,'content/img/logos/css3-icon.svg', 'Cascading Style Sheets Version 3'],
       [3,'content/img/logos/sass-icon.svg', 'Sass: Syntactically Awesome Style Sheets'],
-      [4,'content/img/logos/bootstrap-icon.svg', 'Twitter Bootstrap, a front end library'],
-      [5,'content/img/logos/js-icon.svg', 'Vanilla (plain) Javascript'],
-      [6,'content/img/logos/jquery-icon.svg', 'jQuery Javascript framework'],
+      [4,'content/img/logos/js-icon.svg', 'Vanilla (plain) Javascript'],
+      [5,'content/img/logos/jquery-icon.svg', 'jQuery Javascript framework'],
+      [6,'content/img/logos/bootstrap-icon.svg', 'Twitter Bootstrap, a front end library'],
       [7,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework'],
-      [8,'content/img/logos/redux-icon.svg', 'Redux is an open-source JavaScript library for managing application state.'],
-      [9,'content/img/logos/jest-icon.svg', 'Jest is a JavaScript testing framework.']
+      [8,'content/img/logos/material-ui-icon.svg', 'Material-UI: A popular React UI framework'],
+      [9,'content/img/logos/redux-icon.svg', 'Redux/Redux toolkit are open-source JavaScript libraries for managing application state.'],
+      [10,'content/img/logos/graphql-icon.svg', 'GraphQL is an open-source data query and manipulation language for APIs.'],
+      [11,'content/img/logos/jest-icon.svg', 'Jest is a JavaScript testing framework.'],
     ]
   },
   {

@@ -10,12 +10,10 @@ import Contact from './components/Contact';
 //Added for accessibility makes focus ring only when tabbing
 
 
-
-
 function App() {
   return (
     <AppProvider> 
-      {/* Add js-focus-visible to listen if someone uses keyboard focus touse website */}
+      {/* Add js-focus-visible to listen if someone uses keyboard focus to use website */}
       <div className="js-focus-visible">
         <Nav />
         <Home />
