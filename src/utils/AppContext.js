@@ -14,17 +14,17 @@ export const AppProvider = props => {
   const [inMobile, setinMobile] = useState(true);
   const [portfolioFilter, setPortfolioFilter] = useState("ALL");
   const [portfolioOpacity, setPortfolioOpacity] = useState("ALL");
-  const [show1, setShow1] = useState(false);
-  const [show2, setShow2] = useState(false);
-  const [show3, setShow3] = useState(false);
-  const [show4, setShow4] = useState(false);
-  const [show5, setShow5] = useState(false);
-  const [show6, setShow6] = useState(false);
-  const [show7, setShow7] = useState(false);
-  const [show8, setShow8] = useState(false);
-  const [show9, setShow9] = useState(false);
-  const [show10, setShow10] = useState(false);
-  const [show11, setShow11] = useState(false);
+  const [show1, setShow1] = useState(true);
+  const [show2, setShow2] = useState(true);
+  const [show3, setShow3] = useState(true);
+  const [show4, setShow4] = useState(true);
+  const [show5, setShow5] = useState(true);
+  const [show6, setShow6] = useState(true);
+  const [show7, setShow7] = useState(true);
+  const [show8, setShow8] = useState(true);
+  const [show9, setShow9] = useState(true);
+  const [show10, setShow10] = useState(true);
+  const [show11, setShow11] = useState(true);
 
   return(
     <AppContext.Provider value={{ 
