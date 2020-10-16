@@ -2,7 +2,7 @@
 
 Rebuilt personal portfolio website utilizing React.js to create something technically and visually engaging. It utilizes,, css3 and JS animations and a good amount of SVG's all created by me for a sense of brand and personalized identity.
 
-Live View: https://andy-durette-react-portfolio.herokuapp.com/
+Live View: https://andydurette.com/
 
 ![markdown-preview-image](public/content/img/markdown-preview-image.png)
 
