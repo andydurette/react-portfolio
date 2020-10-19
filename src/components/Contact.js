@@ -20,7 +20,7 @@ const Contact = () => {
             </div>
             <div className="contact-item">
               <img src="content/img/logos/email.svg" alt="email" width="25px" height="25px"/>
-              <p>duretteandy@gmail.com</p>
+              <p>andy@andydurette.com</p>
             </div>
           </div>
         </div>
