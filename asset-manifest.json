@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.8ea920b2.chunk.css",
-    "main.js": "/react-portfolio/static/js/main.8be7c79d.chunk.js",
-    "main.js.map": "/react-portfolio/static/js/main.8be7c79d.chunk.js.map",
+    "main.css": "/react-portfolio/static/css/main.79bea85e.chunk.css",
+    "main.js": "/react-portfolio/static/js/main.f75d500c.chunk.js",
+    "main.js.map": "/react-portfolio/static/js/main.f75d500c.chunk.js.map",
     "runtime-main.js": "/react-portfolio/static/js/runtime-main.f68edf73.js",
     "runtime-main.js.map": "/react-portfolio/static/js/runtime-main.f68edf73.js.map",
-    "static/js/2.77db9775.chunk.js": "/react-portfolio/static/js/2.77db9775.chunk.js",
-    "static/js/2.77db9775.chunk.js.map": "/react-portfolio/static/js/2.77db9775.chunk.js.map",
+    "static/js/2.de4a66d5.chunk.js": "/react-portfolio/static/js/2.de4a66d5.chunk.js",
+    "static/js/2.de4a66d5.chunk.js.map": "/react-portfolio/static/js/2.de4a66d5.chunk.js.map",
     "index.html": "/react-portfolio/index.html",
-    "precache-manifest.fc051d37c13b6bd6c7261df68fd996b5.js": "/react-portfolio/precache-manifest.fc051d37c13b6bd6c7261df68fd996b5.js",
+    "precache-manifest.dfea5b6c14fe3873fff52750d8ef00d1.js": "/react-portfolio/precache-manifest.dfea5b6c14fe3873fff52750d8ef00d1.js",
     "service-worker.js": "/react-portfolio/service-worker.js",
-    "static/css/main.8ea920b2.chunk.css.map": "/react-portfolio/static/css/main.8ea920b2.chunk.css.map",
-    "static/js/2.77db9775.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.77db9775.chunk.js.LICENSE.txt",
+    "static/css/main.79bea85e.chunk.css.map": "/react-portfolio/static/css/main.79bea85e.chunk.css.map",
+    "static/js/2.de4a66d5.chunk.js.LICENSE.txt": "/react-portfolio/static/js/2.de4a66d5.chunk.js.LICENSE.txt",
     "static/media/andyDuretteC.jpg": "/react-portfolio/static/media/andyDuretteC.df41ba3c.jpg",
     "static/media/andyDuretteMobileC.jpg": "/react-portfolio/static/media/andyDuretteMobileC.62eae05e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f68edf73.js",
-    "static/js/2.77db9775.chunk.js",
-    "static/css/main.8ea920b2.chunk.css",
-    "static/js/main.8be7c79d.chunk.js"
+    "static/js/2.de4a66d5.chunk.js",
+    "static/css/main.79bea85e.chunk.css",
+    "static/js/main.f75d500c.chunk.js"
   ]
 }
