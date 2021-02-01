@@ -79,7 +79,7 @@ useEffect(() => {
         <p>{portfolio.description}</p>
         <div className="portfolio-links">
           {portfolio.siteUrl !== ('') ? <a className="btn" href={portfolio.siteUrl} target="_blank" rel="noopener noreferrer" aria-label={portfolio.siteAria}>VIEW SITE</a> : ""}   
-          <a className="btn" href={portfolio.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={portfolio.repoAria}>VIEW REPO</a>
+          {portfolio.repoUrl !== ('') ?<a className="btn" href={portfolio.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={portfolio.repoAria}>VIEW REPO</a> : ""} 
         </div>
 
       </Fade>

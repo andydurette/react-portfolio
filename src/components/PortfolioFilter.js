@@ -134,7 +134,9 @@ const PortfolioFilter = () => {
           <option value="mongodb">Mongodb</option>
           <option value="mysql">Mysql</option>
           <option value="firebase">Firebase</option>
-          <option value="redux">Redux</option>
+          <option value="redux toolkit">Redux Toolkit</option>
+          <option value="aws appsync">AWS AppSync</option>
+          <option value="graphql">GraphQL</option>
         </select>
       </div>
     </div>
