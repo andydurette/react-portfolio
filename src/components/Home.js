@@ -49,7 +49,7 @@ const Home = () => {
   return(
     <React.Fragment>
     {(isDesktopOrLaptop) ? 
-      <animated.section id="home" style={{backgroundImage: `url(${andyDuretteC})`}}>
+      <animated.section id="home" style={{backgroundImage: `url(./${andyDuretteC})`}}>
       <div className="center-container">
         <div className="intro-container">
           <div className="intro-text">
@@ -60,7 +60,7 @@ const Home = () => {
       </div>
     </animated.section>
     :  
-    <section id="home" style={{backgroundImage: `url(${andyDuretteMobileC})`}}>
+    <section id="home" style={{backgroundImage: `url(./${andyDuretteMobileC})`}}>
     <div className="center-container">
       <div className="intro-container">
         <div className="intro-text">
