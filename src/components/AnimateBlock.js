@@ -4,10 +4,11 @@ import IsElementXPercentInViewport from '../utils/IsElementXPercentInViewport';
 
 
 const AnimateBlock = (props) => {
-
+  
+  const [isToggledMarginTop, setToggledMarginTop] = useState(false);
   const [isToggledOpacity, setToggledOpacity] = useState(false);
   const [isToggledMarginBottom, setToggledMarginBottom] = useState(false);
-  const [isToggledMarginTop, setToggledMarginTop] = useState(false);
+  
 
   let springValue = { 
       opacity: isToggledOpacity ? 1 : 0, 
