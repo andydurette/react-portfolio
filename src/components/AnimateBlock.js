@@ -2,7 +2,6 @@ import React,{useEffect, useState} from 'react';
 import {useSpring, animated} from 'react-spring';
 import IsElementXPercentInViewport from '../utils/IsElementXPercentInViewport';
 
-
 const AnimateBlock = (props) => {
 
   const [isToggledOpacity, setToggledOpacity] = useState(false);

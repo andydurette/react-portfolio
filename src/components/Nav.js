@@ -17,7 +17,7 @@ const Nav = () => {
   // Handle setting active class one navbar element
   let [active, setActive] = navActive;
   // Navigation Accessibility
-  let [inMobile, setinMobile] = navInMobile;
+  let [inMobile, setInMobile] = navInMobile;
 
   /********************************************* End of Initialize context state elements *********************************************/
 
@@ -61,9 +61,9 @@ const Nav = () => {
   // MobileNav specific styles controller based upon scroll effects
   const inMobileCheck = () => {
     if(window.innerWidth < 900){
-        setinMobile( inMobile = true);
+        setInMobile( inMobile = true);
       }else{
-        setinMobile( inMobile = false);
+        setInMobile( inMobile = false);
         setMobileNavs( mobileNavs = false);
       }
     }  
