@@ -8,7 +8,7 @@ export const portfolioData = [
     "title": "No Story Recipes",
     "name": "No Story Recipes",
     "description": "A project where I built a recipe storing application called No Story Recipes to learn AWS CDK and TypeScript .",
-    "siteUrl": "https://nostoryrecipes.netlify.app/recipes",
+    "siteUrl": "https://nostoryrecipes.netlify.app",
     "siteAria": "Built using AWS CDK No Story Recipes is a personal recipe storing project.",
     "repoUrl": "",
     "repoAria": "",
