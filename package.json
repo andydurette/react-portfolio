@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "d3-ease": "^1.0.6",
     "focus-visible": "^5.0.2",
-    "node-sass": "^6.0",
+    "node-sass": "^7.0",
     "react": "^17.0.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.12.0",
