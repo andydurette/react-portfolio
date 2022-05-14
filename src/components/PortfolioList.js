@@ -39,12 +39,16 @@ const PortfolioList = () => {
           <option value="full stack">Full Stack</option>
           <option value="react">React</option>
           <option value="node">Node</option>
-          <option value="mongodb">Mongodb</option>
-          <option value="mysql">Mysql</option>
-          <option value="firebase">Firebase</option>
+          <option value="typescript">TypeScript</option>
+          <option value="graphql">GraphQL</option>
           <option value="redux toolkit">Redux Toolkit</option>
           <option value="aws appsync">AWS AppSync</option>
-          <option value="graphql">GraphQL</option>
+          <option value="aws cdk">AWS CDK</option>
+          <option value="mongodb">Mongodb</option>
+          <option value="mysql">Mysql</option>
+          <option value="dynamodb">DynamoDB</option>
+          <option value="firebase">Firebase</option>
+          
         </select>
       </div>
     </div>
