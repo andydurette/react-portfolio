@@ -23,13 +23,13 @@ export const expertiseData = [
       [2,'content/img/logos/css3-icon.svg', 'Cascading Style Sheets Version 3'],
       [3,'content/img/logos/sass-icon.svg', 'Sass: Syntactically Awesome Style Sheets'],
       [4,'content/img/logos/js-icon.svg', 'Vanilla (plain) Javascript'],
-      [5,'content/img/logos/jquery-icon.svg', 'jQuery Javascript framework'],
-      [6,'content/img/logos/bootstrap-icon.svg', 'Twitter Bootstrap, a front end library'],
-      [7,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework'],
-      [8,'content/img/logos/material-ui-icon.svg', 'Material-UI: A popular React UI framework'],
-      [9,'content/img/logos/redux-icon.svg', 'Redux/Redux toolkit are open-source JavaScript libraries for managing application state.'],
-      [10,'content/img/logos/graphql-icon.svg', 'GraphQL is an open-source data query and manipulation language for APIs.'],
-      [11,'content/img/logos/jest-icon.svg', 'Jest is a JavaScript testing framework.'],
+      // [5,'content/img/logos/ts-icon.svg', 'Typescript, a strict syntactical superset of JavaScript which adds types'],
+      [5,'content/img/logos/bootstrap-icon.svg', 'Twitter Bootstrap, a front end library'],
+      [6,'content/img/logos/react-icon.svg', 'React.js Front End javascript Framework'],
+      [7,'content/img/logos/material-ui-icon.svg', 'Material-UI: A popular React UI framework'],
+      [8,'content/img/logos/redux-icon.svg', 'Redux/Redux toolkit are open-source JavaScript libraries for managing application state.'],
+      [9,'content/img/logos/graphql-icon.svg', 'GraphQL is an open-source data query and manipulation language for APIs.'],
+      [10,'content/img/logos/jest-icon.svg', 'Jest is a JavaScript testing framework.'],
     ]
   },
   {
@@ -42,7 +42,9 @@ export const expertiseData = [
       [1,'content/img/logos/node-icon.svg', 'Node.js, Javascript that executes outside of a browser.'],
       [2,'content/img/logos/mongodb-icon.svg', 'MongoDB noSQL database technology'],
       [3,'content/img/logos/mysql-icon.svg', 'MySQL, Structured Query Language'],
-      [4,'content/img/logos/git-icon.svg', 'Git distributed version-control system for tracking changes']
+      [4,'content/img/logos/dynamodb-icon.svg', 'NoSQL database service offered by AWS'],
+      [5,'content/img/logos/aws-icon.svg', 'Amazon Web Services'],
+      [6,'content/img/logos/git-icon.svg', 'Git distributed version-control system for tracking changes'],
       ]
     },  
 

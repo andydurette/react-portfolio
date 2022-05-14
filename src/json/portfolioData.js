@@ -3,6 +3,20 @@
 export const portfolioData = [
   {
     "id":"1",
+    "imageUrl": "content/img/portfolio/no-story-recipes.svg",
+    "altText": "No Story Recipes",
+    "title": "No Story Recipes",
+    "name": "No Story Recipes",
+    "description": "A project where I built a recipe storing application called No Story Recipes to learn AWS CDK and TypeScript .",
+    "siteUrl": "https://nostoryrecipes.netlify.app/recipes",
+    "siteAria": "Built using AWS CDK No Story Recipes is a personal recipe storing project.",
+    "repoUrl": "",
+    "repoAria": "",
+    "tags" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "FULL STACK", "AWS APPSYNC", "AWS CDK", "DYNAMODB", "TYPESCRIPT"],
+    "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "FULL STACK", "AWS APPSYNC", "AWS CDK", "DYNAMODB", "TYPESCRIPT"],
+  },
+  {
+    "id":"2",
     "imageUrl": "content/img/portfolio/turnnout.svg",
     "altText": "Turrnout",
     "title": "Turrnout",
@@ -16,7 +30,7 @@ export const portfolioData = [
     "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "NODE", "CI/CD", "LINT", "DEVOPS", "FULL STACK", "AWS APPSYNC", "REDUX TOOLKIT", "GRAPHQL"],
   },
   {
-    "id": "2",
+    "id": "3",
     "imageUrl": "content/img/portfolio/neighbourhood-3.svg",
     "altText": "Toronto Neighbourhood Safety app",
     "title": "Is My Neighbourhood Safe?",
@@ -30,7 +44,7 @@ export const portfolioData = [
     "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "SASS", "FULL STACK"],
   },
   {
-    "id": "3",
+    "id": "4",
     "imageUrl": "content/img/portfolio/g-book.svg",
     "altText": "Google Books",
     "title": "Google Books",
@@ -44,7 +58,7 @@ export const portfolioData = [
     "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "MERN", "MONGODB", "REACT", "SASS", "FULL STACK"],
   },
   {
-    "id": "4",
+    "id": "5",
     "imageUrl": "content/img/portfolio/qards.svg",
     "altText": "QaRds App business cards for a digital future",
     "title": "QaRds",
@@ -58,7 +72,7 @@ export const portfolioData = [
     "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "MYSQL", "SASS", "FULL STACK"],
   },
   {
-    "id":"5",
+    "id":"6",
     "imageUrl": "content/img/portfolio/nextfantasy.svg",
     "altText": "Next Fantasy",
     "title": "Next Fantasy",
@@ -72,7 +86,7 @@ export const portfolioData = [
     "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "NODE", "NEXTJS", "JEST", "SASS", "CI/CD", "LINT", "DEVOPS", "FULL STACK", "FIREBASE"],
   },
   {
-    "id": "6",
+    "id": "7",
     "imageUrl": "content/img/portfolio/30-days.svg",
     "altText": "30 day icon challenge",
     "title": "Password Generator app",
@@ -86,7 +100,7 @@ export const portfolioData = [
     "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "ILLUSTRATOR", "UI/UX", "FRONT END"],
   },
   {
-    "id":"7",
+    "id":"8",
     "imageUrl": "content/img/portfolio/bee.svg",
     "altText": "Bees of America",
     "title": "Bees of America",
@@ -100,7 +114,7 @@ export const portfolioData = [
     "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "REACT", "ILLUSTRATOR", "SASS", "FRONT END"],
   },
   {
-    "id": "8",
+    "id": "9",
     "imageUrl": "content/img/portfolio/team-profile.svg",
     "altText": "Team Profile App",
     "title": "Team Profile App",
@@ -114,7 +128,7 @@ export const portfolioData = [
     "filter" : ["HTML5", "CSS3", "JAVASCRIPT", "NODE", "EXPRESS", "BACK END"],
   },
   {
-    "id": "9",
+    "id": "20",
     "imageUrl": "content/img/portfolio/employee-tracker.svg",
     "altText": "Employee tracker app",
     "title": "Employee tracker",
