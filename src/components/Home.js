@@ -28,7 +28,8 @@ const Home = () => {
   const fade2 = useSpring({
     opacity: isToggledOpacity ? 1 : 0,
     delay: 0,
-    config: { duration: 1000, easing: easings.easeCubic }
+    config: { duration: 1000, easing: easings.easeCubic },
+    lineHeight:'25px'
   });
 
   useEffect(() => {
@@ -54,7 +55,9 @@ const Home = () => {
         <div className="intro-container">
           <div className="intro-text">
             <animated.div style={fade1} className="intro-heading">I'm Andy</animated.div>
-            <animated.div style={fade2} className="intro-lead-in">A React &amp; Node JS Full Stack Developer</animated.div>
+            <animated.div style={fade2} className="intro-lead-in">
+              A Full Stack Developer &#38; Designer <br/>specialized in React, Node Js and AWS
+            </animated.div>
             </div>
         </div>
       </div>
